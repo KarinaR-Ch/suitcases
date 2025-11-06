@@ -2271,10 +2271,6 @@
                 font-size: 120px;
             }
 
-            .offer-title {
-                font-size: 32px;
-            }
-
             .customers-rectangles {
                 flex-direction: column;
                 align-items: center;
@@ -3400,362 +3396,751 @@
             color: white;
         }
 
-        /* Стилі для модального вікна відгуків */
-        .reviews-modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
+        /* Стилі для сторінки відгуків */
+        .reviews-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
         }
 
-        .reviews-modal-content {
+        .reviews-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+        }
+
+        .reviews-tab {
+            font-weight: 700;
+            font-size: 17px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            color: #333;
+            cursor: pointer;
+            padding: 10px 20px;
+            transition: color 0.3s;
+            white-space: nowrap;
+            text-transform: uppercase;
+        }
+
+        .reviews-tab:hover {
+            color: #007bff;
+        }
+
+        .reviews-split-section {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .reviews-left-half,
+        .reviews-right-half {
+            display: flex;
+        }
+
+        .review-count {
+            width: 477px;
+            height: 21px;
+            font-family: Montserrat;
+            font-weight: 700;
+            font-size: 17px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            color: #000;
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+        }
+
+        .add-review-section {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .add-review-text {
+            font-family: Montserrat;
+            font-weight: 700;
+            font-size: 17px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            color: #000;
+            white-space: nowrap;
+        }
+
+        .rate-product-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 35px;
+        }
+
+        .rate-product {
+            font-family: Montserrat;
+            font-weight: 700;
+            font-size: 13px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            color: #000;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        .rate-stars {
+            display: flex;
+            gap: 5px;
+        }
+
+        .rate-star {
+            font-size: 18px;
+            color: #CCCCCC;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .rate-star.active {
+            color: gold;
+        }
+
+        .rate-star:hover {
+            color: gold;
+        }
+
+        .email-note {
+            font-family: Montserrat;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            color: rgba(0, 0, 0, 1);
+            margin-top: 45px;
+            width: 100%;
+            text-align: left;
+        }
+
+        .review-rectangle {
+            width: 606px;
+            height: 170px;
             background: white;
-            padding: 20px;
-            border-radius: 5px;
-            max-width: 800px;
-            width: 90%;
-            max-height: 90%;
-            overflow-y: auto;
+            border: 2px solid rgba(185, 39, 112, 1);
+            margin-top: 15px;
             position: relative;
         }
 
-        .close-reviews {
+        .review-textarea {
+            width: 100%;
+            height: 100%;
+            border: none;
+            outline: none;
+            padding: 8px;
+            font-family: Montserrat;
+            font-size: 13px;
+            resize: none;
+            box-sizing: border-box;
+        }
+
+        .review-label {
+            font-family: Montserrat;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            color: rgba(114, 113, 116, 1);
             position: absolute;
-            top: 10px;
-            right: 15px;
-            font-size: 24px;
+            top: 8px;
+            left: 8px;
+            pointer-events: none;
+            transition: all 0.2s;
+        }
+
+        .review-rectangle.focused .review-label {
+            top: -10px;
+            left: 5px;
+            font-size: 11px;
+            color: rgba(185, 39, 112, 1);
+            background: white;
+            padding: 0 5px;
+        }
+
+        .small-rectangles-container {
+            display: flex;
+            gap: 24px;
+            margin-top: 10px;
+            width: 606px;
+        }
+
+        .small-rectangle {
+            width: 291px;
+            height: 38px;
+            background: white;
+            border: 2px solid rgba(185, 39, 112, 1);
+            position: relative;
+        }
+
+        .small-input {
+            width: 100%;
+            height: 100%;
+            border: none;
+            outline: none;
+            padding: 8px;
+            font-family: Montserrat;
+            font-size: 13px;
+            box-sizing: border-box;
+        }
+
+        .field-label {
+            font-family: Montserrat;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            color: rgba(114, 113, 116, 1);
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            pointer-events: none;
+            transition: all 0.2s;
+        }
+
+        .small-rectangle.focused .field-label {
+            top: -10px;
+            left: 5px;
+            font-size: 11px;
+            color: rgba(185, 39, 112, 1);
+            background: white;
+            padding: 0 5px;
+        }
+
+        .save-info-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 15px;
+            width: 606px;
+        }
+
+        .checkbox-square {
+            width: 16px;
+            height: 16px;
+            background: white;
+            border: 2px solid rgba(114, 113, 116, 1);
             cursor: pointer;
-            z-index: 1001;
+            position: relative;
+        }
+
+        .checkbox-square.checked::after {
+            content: '✓';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: rgba(185, 39, 112, 1);
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .save-text {
+            font-family: Montserrat;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            color: rgba(114, 113, 116, 1);
+        }
+
+        .reviews-submit-btn {
+            width: 90px;
+            height: 40px;
+            background: rgba(185, 39, 112, 1);
+            color: white;
+            border: none;
+            font-family: "Helvetica Neue", sans-serif;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-transform: uppercase;
+            margin-top: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .reviews-submit-btn:hover {
+            background: rgba(165, 29, 92, 1);
+        }
+
+        .reviews-image-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .review-image {
+            width: 46px;
+            height: 46px;
+            opacity: 1;
+        }
+
+        .review-content {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .reviewer-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .reviewer-name {
+            font-family: Montserrat;
+            font-weight: 700;
+            font-size: 17px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            color: rgba(80, 78, 74, 1);
+            white-space: nowrap;
+        }
+
+        .review-date {
+            font-family: Montserrat;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            color: rgba(114, 113, 116, 1);
+            white-space: nowrap;
+        }
+
+        .review-stars {
+            display: flex;
+            gap: 5px;
+            margin-left: 20px;
+        }
+
+        .review-star {
+            font-size: 18px;
+        }
+
+        .review-star.yellow {
+            color: #FFD700;
+        }
+
+        .review-star.gray {
+            color: #CCCCCC;
+        }
+
+        .review-text {
+            font-family: Montserrat;
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            color: rgba(114, 113, 116, 1);
+        }
+
+        .user-reviews-container {
+            margin-top: 30px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        .user-review {
+            background: #f9f9f9;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+
+        .user-review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .user-review-name {
+            font-weight: bold;
+            color: rgba(185, 39, 112, 1);
+        }
+
+        .user-review-date {
+            color: #888;
+            font-size: 12px;
+        }
+
+        .user-review-stars {
+            display: flex;
+            gap: 2px;
+            margin: 5px 0;
+        }
+
+        .user-review-text {
+            color: #333;
+            line-height: 1.4;
         }
 
         @media (max-width: 768px) {
-            .product-page {
-                transform: scale(0.8);
-            }
-
-            .product-content-section {
-                flex-direction: column;
-                padding: 5px;
-                margin-top: -10px;
-            }
-
-            .product-image-section {
-                width: 100%;
-                height: auto;
-                max-width: 400px;
-                margin: 0 auto;
-            }
-
-            .product-text-section {
-                margin-left: 0;
-                margin-top: 15px;
-                align-items: center;
-                text-align: center;
-            }
-
-            .product-text-line {
-                text-align: center;
-                font-size: 20px;
-            }
-
-            .product-stars {
-                justify-content: center;
-            }
-
-            .product-price {
-                text-align: center;
-            }
-
-            .product-description {
-                text-align: center;
-                white-space: normal;
-            }
-
-            .product-additional-text {
-                text-align: center;
-                white-space: normal;
-            }
-
-            .product-info-item {
-                text-align: center;
-            }
-
-            .product-dropdown-container {
-                width: 100%;
-                max-width: 612px;
-            }
-
-            .product-thumbnails {
-                gap: 8px;
-            }
-
-            .product-thumbnail {
-                width: 85px;
-                height: 83px;
-            }
-
-            .product-action-container {
-                flex-direction: column;
-                gap: 10px;
-                width: 100%;
-            }
-
-            .product-quantity {
-                width: 150px;
-            }
-
-            .product-add-to-cart {
-                width: 100%;
-                max-width: 470px;
-            }
-
-            .product-payments {
-                width: 100%;
-                max-width: 424.0880126953125px;
-            }
-
-            .product-tabs-section {
-                transform: scale(0.75) translateY(20px);
-                margin-top: -10px;
-            }
-
-            .product-tabs-container {
+            .reviews-tabs {
                 flex-direction: column;
                 gap: 15px;
-            }
-
-            .product-tab-content {
-                transform: scale(0.75) translateY(20px);
-                margin-top: 10px;
-            }
-
-            .product-long-text-content {
-                white-space: normal;
-                font-size: 14px;
-            }
-
-            .product-additional-text-content {
-                white-space: normal;
-                font-size: 14px;
-            }
-
-            .product-recommendations-section {
-                transform: scale(0.75) translateY(20px);
-                margin-top: -10px;
-            }
-
-            .product-recommendations-title {
-                font-size: 25px;
-            }
-
-            .product-recommendation-images {
-                flex-direction: column;
                 align-items: center;
-                gap: 20px;
-                overflow-x: hidden;
-                padding-bottom: 0;
             }
 
-            .product-recommendation-item {
+            .reviews-split-section {
+                flex-direction: column;
+            }
+
+            .reviews-left-half,
+            .reviews-right-half {
                 width: 100%;
-                max-width: 296px;
+                justify-content: center;
+                margin-bottom: 15px;
             }
 
-            .product-recommendation-item img {
-                height: 400px;
+            .add-review-section {
+                align-items: center;
             }
 
-            .product-line {
-                font-size: 14px;
+            .email-note {
+                text-align: center;
             }
 
-            .product-recommendation-price {
-                font-size: 17px;
+            .review-rectangle {
+                width: 100%;
             }
 
-            .product-sale-badge {
-                width: 48px;
-                height: 24px;
-                top: 8px;
-                left: 8px;
+            .small-rectangles-container {
+                width: 100%;
+                flex-direction: column;
+                gap: 10px;
             }
 
-            .product-sale-text {
-                font-size: 10px;
+            .small-rectangle {
+                width: 100%;
             }
 
-            .product-recommendation-add-to-cart {
-                width: 140px;
-                height: 36px;
+            .save-info-container {
+                width: 100%;
             }
 
-            .product-recommendation-add-to-cart-text {
-                font-size: 13px;
+            .reviews-image-container {
+                margin-top: 30px;
+            }
+
+            .reviews-container {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .reviews-split-section .reviews-left-half {
+                order: 1;
+            }
+
+            .reviews-image-container {
+                order: 2;
+            }
+
+            .reviews-split-section .reviews-right-half {
+                order: 3;
             }
         }
 
         @media (max-width: 480px) {
-            .product-page {
-                transform: scale(0.7);
+            .gray-rectangle {
+                height: 600px;
             }
 
-            .product-content-section {
-                padding: 5px;
-                transform: scale(0.65);
-                margin-top: -15px;
+            .white-top-rectangle {
+                width: 350px;
+                height: auto;
+                bottom: -500px;
+                flex-direction: column;
             }
 
-            .product-text-line {
+            .white-top-left {
+                width: 100%;
+                height: 350px;
+                flex-direction: column;
+                gap: 10px;
+                padding: 20px 15px;
+                align-items: center;
+            }
+
+            .white-top-left img {
+                width: 60px;
+                height: 65px;
+                margin-top: 0;
+                order: 1;
+            }
+
+            .text-content {
+                order: 2;
+                margin-top: 8px;
+                gap: 3px;
+            }
+
+            .quote-text {
+                position: static;
+                order: 3;
+                margin-top: 15px;
+                font-size: 18px;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                gap: 3px;
+            }
+
+            .description-text {
+                position: static;
+                order: 4;
+                margin-top: 12px;
+                font-size: 11px;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                gap: 3px;
+            }
+
+            .additional-text {
+                position: static;
+                order: 5;
+                margin-top: 12px;
+                font-size: 11px;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                gap: 3px;
+                white-space: normal;
+            }
+
+            .name-text {
+                font-size: 16px;
+            }
+
+            .position-text {
+                font-size: 14px;
+            }
+
+            .discount-content {
+                left: 15px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                width: 100%;
+                transform: none;
+                top: 50%;
+            }
+
+            .discount-text {
+                font-size: 18px;
+                margin-bottom: 8px;
+                text-align: center;
+            }
+
+            .discount-description {
+                font-size: 11px;
+                margin-bottom: 8px;
+                text-align: center;
+            }
+
+            .discount-button {
+                width: 120px;
+                height: 40px;
+            }
+
+            .discount-button-text {
+                font-size: 12px;
+            }
+
+            .white-top-right {
+                width: 100%;
+                height: 200px;
+            }
+
+            .white-top-right img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .image-container {
+                width: 255px;
+                height: 208px;
+                left: auto;
+                right: 10px;
+                top: calc(50% - 80px) !important;
+                transform: translateY(-50%);
+            }
+
+            .text-container {
+                font-size: 24px;
+                left: 15px;
+                width: 200px;
+                top: 50px !important;
+            }
+
+            .paragraph-1 {
+                font-size: 11px;
+                left: 15px;
+                width: 280px;
+                top: 100px !important;
+            }
+
+            .paragraph-2 {
+                font-size: 11px;
+                left: 15px;
+                width: 280px;
+                top: 120px !important;
+            }
+
+            .button {
+                left: 15px;
+                top: 150px !important;
+                width: 130px;
+                height: 45px;
+            }
+
+            .button-text {
+                font-size: 14px;
+            }
+
+            .suitcases-images {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .suitcases-images img {
+                width: 280px;
+            }
+
+            .suitcases-title {
+                font-size: 28px;
+            }
+
+            .suitcases-subtitle {
+                font-size: 14px;
+                margin-bottom: 30px;
+            }
+
+            .products-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 25px;
+            }
+
+            .product-item {
+                width: 280px;
+            }
+
+            .products-container img {
+                height: 320px;
+            }
+
+            .product-text,
+            .product-price {
                 font-size: 18px;
             }
 
-            .product-star {
+            .add-to-cart-btn {
+                width: 150px;
+                height: 38px;
                 font-size: 16px;
             }
 
-            .product-price {
+            .selected-heading {
+                font-size: 24px;
+            }
+
+            .selected-subheading {
+                font-size: 13px;
+            }
+
+            .product-item {
+                width: 260px;
+            }
+
+            .products-container img {
+                height: 300px;
+            }
+
+            .offer-big-text {
+                font-size: 80px;
+            }
+
+            .offer-small-text {
                 font-size: 16px;
             }
 
-            .product-description {
-                font-size: 13px;
-                white-space: normal;
+            .offer-title {
+                font-size: 28px;
             }
 
-            .product-additional-text {
-                font-size: 13px;
-                white-space: normal;
+            .offer-description {
+                font-size: 14px;
             }
 
-            .product-info-item {
+            .offer-button {
+                width: 180px;
+                height: 50px;
+                font-size: 16px;
+            }
+
+            .customers-title {
+                font-size: 28px;
+            }
+
+            .customers-subtitle {
                 font-size: 15px;
             }
 
-            .product-dropdown-container {
+            .customer-rectangle {
                 width: 100%;
+                max-width: 350px;
+                padding: 15px;
             }
 
-            .product-thumbnails {
-                gap: 5px;
-            }
-
-            .product-thumbnail {
-                width: 70px;
-                height: 68px;
-            }
-
-            .product-action-container {
-                flex-direction: column;
-                gap: 8px;
-            }
-
-            .product-quantity {
-                width: 120px;
-                height: 45px;
-            }
-
-            .product-quantity-button,
-            .product-quantity-number {
-                font-size: 20px;
-            }
-
-            .product-add-to-cart {
-                width: 100%;
-                height: 45px;
-            }
-
-            .product-add-to-cart-text {
+            .customer-text-content {
                 font-size: 15px;
             }
 
-            .product-payments {
-                width: 100%;
-                max-width: 424.0880126953125px;
-            }
-
-            .product-tabs-section {
-                transform: scale(0.65) translateY(20px);
-                margin-top: -15px;
-            }
-
-            .product-tabs-container {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            .product-tab-content {
-                transform: scale(0.65) translateY(20px);
-                margin-top: 5px;
-            }
-
-            .product-long-text-content {
-                white-space: normal;
-                font-size: 12px;
-            }
-
-            .product-additional-text-content {
-                white-space: normal;
-                font-size: 12px;
-            }
-
-            .product-recommendations-section {
-                transform: scale(0.65) translateY(20px);
-                margin-top: -15px;
-            }
-
-            .product-recommendations-title {
-                font-size: 20px;
-            }
-
-            .product-recommendation-images {
-                flex-direction: column;
-                align-items: center;
-                gap: 15px;
-                overflow-x: hidden;
-                padding-bottom: 0;
-            }
-
-            .product-recommendation-item {
-                width: 100%;
-                max-width: 296px;
-            }
-
-            .product-recommendation-item img {
-                height: 400px;
-            }
-
-            .product-line {
-                font-size: 12px;
-            }
-
-            .product-recommendation-price {
+            .customer-name {
                 font-size: 15px;
             }
 
-            .product-sale-badge {
-                width: 42px;
-                height: 22px;
-                top: 6px;
-                left: 6px;
+            .catalog-section {
+                padding: 0 5px;
             }
 
-            .product-sale-text {
-                font-size: 9px;
+            .container,
+            .sidebar {
+                padding: 10px;
             }
 
-            .product-recommendation-add-to-cart {
-                width: 130px;
-                height: 32px;
+            .image-container {
+                min-width: 100%;
             }
 
-            .product-recommendation-add-to-cart-text {
-                font-size: 12px;
+            .image-wrapper img {
+                width: 100%;
+                max-width: 250px;
+                height: 300px;
+            }
+
+            .add-to-cart-btn {
+                width: 100%;
+                max-width: 200px;
+            }
+
+            .pagination {
+                flex-wrap: wrap;
             }
         }
 
@@ -4435,6 +4820,531 @@
                 font-size: 16px;
             }
         }
+
+        /* НОВІ СТИЛІ ДЛЯ ПЕРЕКРЕСЛЕНИХ ЦІН */
+        .old-price {
+            text-decoration: line-through;
+            color: #999;
+            margin-right: 5px;
+            font-size: 16px;
+        }
+
+        .new-price {
+            color: #000;
+            font-weight: bold;
+            font-size: 19px;
+        }
+
+        .price-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        /* Стилі для модального вікна логіну */
+        .login-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-container {
+            width: 480px;
+            height: 384px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+            position: relative;
+        }
+
+        .close-login {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        .form-group label {
+            display: block;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 100%;
+            margin-bottom: 8px;
+            color: #333;
+            width: 340px;
+            text-align: left;
+        }
+
+        .required::after {
+            content: " *";
+            color: #b92770;
+        }
+
+        .login-container input[type="email"],
+        .login-container input[type="password"],
+        .login-container input[type="text"] {
+            width: 340px;
+            height: 40px;
+            border: 2px solid rgba(185, 39, 112, 0.5);
+            border-radius: 4px;
+            padding: 0 12px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+
+        .login-container input[type="email"]:focus,
+        .login-container input[type="password"]:focus,
+        .login-container input[type="text"]:focus {
+            outline: none;
+            border-color: rgba(185, 39, 112, 1);
+        }
+
+        .submit-btn {
+            width: 340px;
+            height: 40px;
+            background-color: #b92770;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+            text-transform: uppercase;
+        }
+
+        .submit-btn:hover {
+            background-color: #9c1f5d;
+        }
+
+        .options-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 340px;
+            margin-top: 15px;
+        }
+
+        .remember-me {
+            display: flex;
+            align-items: center;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            font-size: 9px;
+            line-height: 100%;
+            color: rgba(114, 113, 116, 1);
+        }
+
+        .remember-checkbox {
+            width: 12px;
+            height: 12px;
+            border: 1px solid rgba(114, 113, 116, 1);
+            margin-right: 6px;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .remember-checkbox.checked::after {
+            content: '✓';
+            color: rgba(185, 39, 112, 1);
+            font-size: 10px;
+            font-weight: bold;
+        }
+
+        .forgot-password {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            font-size: 9px;
+            line-height: 100%;
+        }
+
+        .forgot-password a {
+            color: #b92770;
+            text-decoration: none;
+        }
+
+        .forgot-password a:hover {
+            text-decoration: underline;
+        }
+
+        .password-container {
+            position: relative;
+            width: 340px;
+        }
+
+        .toggle-password {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #b92770;
+            font-size: 18px;
+            user-select: none;
+        }
+
+        .toggle-password::after {
+            content: "👁";
+        }
+
+        @media (max-width: 768px) {
+            .login-container {
+                width: 90%;
+                max-width: 480px;
+                height: auto;
+                padding: 20px;
+            }
+
+            .form-group label,
+            .login-container input[type="email"],
+            .login-container input[type="password"],
+            .login-container input[type="text"],
+            .submit-btn,
+            .options-container {
+                width: 100%;
+            }
+        }
+
+        /* АДАПТАЦІЯ СТОРІНКИ ПРОДУКТУ ДЛЯ МОБІЛЬНИХ ПРИСТРОЇВ */
+        @media (max-width: 768px) {
+            .product-page {
+                transform: none;
+                margin-top: 0;
+            }
+
+            .product-content-section {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            .product-image-section {
+                width: 100%;
+                height: auto;
+                margin-bottom: 20px;
+            }
+
+            .product-image-section img {
+                width: 100%;
+                height: 400px;
+                object-fit: contain;
+            }
+
+            .product-text-section {
+                margin-left: 0;
+                padding-top: 0;
+                width: 100%;
+            }
+
+            .product-text-line {
+                font-size: 20px;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+
+            .product-stars {
+                justify-content: center;
+                margin: 10px 0;
+            }
+
+            .product-price {
+                text-align: center;
+                font-size: 22px;
+                margin-top: 10px;
+            }
+
+            .product-description,
+            .product-additional-text {
+                white-space: normal;
+                text-align: center;
+                font-size: 14px;
+                line-height: 1.4;
+                margin: 10px 0;
+            }
+
+            .product-info-item {
+                text-align: center;
+                margin-top: 15px;
+            }
+
+            .product-dropdown-container {
+                width: 100%;
+                max-width: 300px;
+                margin: 5px auto 15px auto;
+            }
+
+            .product-thumbnails {
+                justify-content: center;
+                gap: 8px;
+                margin-top: 15px;
+            }
+
+            .product-thumbnail {
+                width: 80px;
+                height: 80px;
+            }
+
+            .product-action-container {
+                flex-direction: column;
+                gap: 15px;
+                margin-top: 20px;
+                align-items: center;
+            }
+
+            .product-quantity {
+                width: 150px;
+            }
+
+            .product-add-to-cart {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .product-payments {
+                width: 100%;
+                max-width: 300px;
+                margin: 15px auto;
+            }
+
+            .product-tabs-section {
+                padding: 0 10px;
+                transform: none;
+            }
+
+            .product-tabs-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .product-tab {
+                padding: 12px 0;
+                font-size: 16px;
+            }
+
+            .product-tab-content {
+                padding: 0 10px;
+            }
+
+            .product-long-text-content,
+            .product-additional-text-content {
+                white-space: normal;
+                font-size: 14px;
+                line-height: 1.4;
+                text-align: center;
+            }
+
+            .product-recommendations-section {
+                transform: none;
+                padding: 0 10px;
+            }
+
+            .product-recommendations-title {
+                font-size: 24px;
+            }
+
+            .product-recommendation-images {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+
+            .product-recommendation-item {
+                width: 100%;
+                max-width: 280px;
+            }
+
+            .product-recommendation-item img {
+                height: 300px;
+            }
+
+            .product-details {
+                text-align: center;
+            }
+
+            .product-line {
+                font-size: 14px;
+            }
+
+            .product-recommendation-price {
+                font-size: 16px;
+            }
+
+            .product-recommendation-add-to-cart {
+                width: 140px;
+                height: 35px;
+            }
+
+            .product-recommendation-add-to-cart-text {
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .product-image-section img {
+                height: 300px;
+            }
+
+            .product-text-line {
+                font-size: 18px;
+            }
+
+            .product-price {
+                font-size: 20px;
+            }
+
+            .product-description,
+            .product-additional-text {
+                font-size: 13px;
+            }
+
+            .product-thumbnail {
+                width: 70px;
+                height: 70px;
+            }
+
+            .product-add-to-cart {
+                height: 50px;
+            }
+
+            .product-add-to-cart-text {
+                font-size: 16px;
+            }
+
+            .product-tab {
+                font-size: 14px;
+            }
+
+            .product-long-text-content,
+            .product-additional-text-content {
+                font-size: 13px;
+            }
+
+            .product-recommendations-title {
+                font-size: 22px;
+            }
+
+            .product-recommendation-item img {
+                height: 250px;
+            }
+        }
+
+        /* АДАПТАЦІЯ ФОРМИ ВІДГУКІВ ДЛЯ МОБІЛЬНИХ */
+        @media (max-width: 768px) {
+            .reviews-container {
+                padding: 15px;
+            }
+
+            .reviews-split-section {
+                flex-direction: column;
+            }
+
+            .reviews-left-half,
+            .reviews-right-half {
+                width: 100%;
+            }
+
+            .review-count {
+                width: 100%;
+                text-align: center;
+                justify-content: center;
+                margin-bottom: 20px;
+            }
+
+            .add-review-section {
+                align-items: center;
+                width: 100%;
+            }
+
+            .add-review-text {
+                text-align: center;
+            }
+
+            .email-note {
+                text-align: center;
+            }
+
+            .rate-product-container {
+                flex-direction: column;
+                gap: 10px;
+                margin-top: 20px;
+            }
+
+            .review-rectangle {
+                width: 100%;
+                height: 120px;
+            }
+
+            .small-rectangles-container {
+                width: 100%;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .small-rectangle {
+                width: 100%;
+            }
+
+            .save-info-container {
+                width: 100%;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .reviews-image-container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .reviewer-info {
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            .review-stars {
+                margin-left: 0;
+            }
+
+            .review-text {
+                text-align: center;
+            }
+        }
     </style>
 </head>
 
@@ -4494,82 +5404,36 @@
         <!-- Тут буде відображатися вміст сторінок -->
     </div>
 
-    <!-- Модальне вікно для відгуків -->
-    <div id="reviews-modal" class="reviews-modal">
-        <div class="reviews-modal-content">
-            <span class="close-reviews" onclick="closeReviewsModal()">×</span>
-            <!-- Вміст відгуків -->
-            <div class="container">
-                <div class="tabs">
-                    <div class="tab">Details</div>
-                    <div class="tab">Reviews</div>
-                    <div class="tab">Shipping Policy</div>
+    <!-- Модальне вікно для логіну -->
+    <div id="login-modal" class="login-modal">
+        <div class="login-container">
+            <span class="close-login" onclick="closeLoginModal()">×</span>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="email" class="required">Email address</label>
+                    <input type="email" id="email" name="email" required>
                 </div>
 
-                <div class="split-section">
-                    <div class="left-half">
-                        <div class="review-count">1 review for Global Explorer Max Comfort Suitcase Pro</div>
-                    </div>
-                    <div class="right-half">
-                        <div class="add-review-section">
-                            <div class="add-review-text">Add Review</div>
-                            <div class="email-note">Your email address won't be shared with anybody. Required fields
-                                have the
-                                symbol *</div>
-                            <div class="rate-product-container">
-                                <div class="rate-product">RATE PRODUCT</div>
-                                <div class="rate-stars">
-                                    <span class="rate-star">★</span>
-                                    <span class="rate-star">★</span>
-                                    <span class="rate-star">★</span>
-                                    <span class="rate-star">★</span>
-                                    <span class="rate-star">★</span>
-                                </div>
-                            </div>
-                            <div class="review-rectangle">
-                                <div class="review-label">Your Review*</div>
-                            </div>
-                            <div class="small-rectangles-container">
-                                <div class="small-rectangle">
-                                    <div class="field-label">Your Name*</div>
-                                </div>
-                                <div class="small-rectangle">
-                                    <div class="field-label">Your Email*</div>
-                                </div>
-                            </div>
-                            <div class="save-info-container">
-                                <div class="checkbox-square"></div>
-                                <div class="save-text">Save my name, email, and website in this browser for when I leave
-                                    another
-                                    comment.</div>
-                            </div>
-                            <button class="submit-btn">SUBMIT</button>
-                        </div>
+                <div class="form-group">
+                    <label for="password" class="required">Password</label>
+                    <div class="password-container">
+                        <input type="password" id="password" name="password" required>
+                        <div class="toggle-password" id="togglePassword"></div>
                     </div>
                 </div>
-                <div class="image-container">
-                    <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/img.png"
-                        alt="Review" class="review-image">
-                    <div class="review-content">
-                        <div class="reviewer-info">
-                            <div class="reviewer-name">Ella Harper</div>
-                            <div class="review-date">/ June 11, 2025</div>
-                            <div class="stars">
-                                <span class="star yellow">★</span>
-                                <span class="star yellow">★</span>
-                                <span class="star yellow">★</span>
-                                <span class="star yellow">★</span>
-                                <span class="star gray">★</span>
-                            </div>
-                        </div>
-                        <div class="review-text">
-                            Proin iaculis nibh vitae lectus mollis bibendum. Quisque<br>
-                            varius eget urna sit amet luctus. Suspendisse potenti<br>
-                            curabitur ac placerat est, sit amet sodales risus.
-                        </div>
+
+                <div class="options-container">
+                    <div class="remember-me">
+                        <div class="remember-checkbox" id="remember-checkbox"></div>
+                        Remember me
+                    </div>
+                    <div class="forgot-password">
+                        <a href="#">Forgot your password?</a>
                     </div>
                 </div>
-            </div>
+
+                <button type="submit" class="submit-btn">Log in</button>
+            </form>
         </div>
     </div>
 
@@ -4632,6 +5496,36 @@
     <script>
         // Глобальна змінна для кошика
         let cart = [];
+        let userReviews = [];
+        let isLoggedIn = false;
+
+        // Перевірка, чи є збережені дані користувача в sessionStorage
+        function checkRememberedUser() {
+            const rememberedUser = sessionStorage.getItem('rememberedUser');
+            if (rememberedUser) {
+                const userData = JSON.parse(rememberedUser);
+                document.getElementById('email').value = userData.email;
+                document.getElementById('password').value = userData.password;
+                document.getElementById('remember-checkbox').classList.add('checked');
+                isLoggedIn = true;
+                // Автоматично переходимо на сторінку корзини, якщо користувач запам'ятований
+                loadPage('user');
+            }
+        }
+
+        // Збереження даних користувача в sessionStorage
+        function rememberUser(email, password) {
+            const userData = {
+                email: email,
+                password: password
+            };
+            sessionStorage.setItem('rememberedUser', JSON.stringify(userData));
+        }
+
+        // Видалення збережених даних користувача
+        function forgetUser() {
+            sessionStorage.removeItem('rememberedUser');
+        }
 
         // Вміст сторінок
         const pages = {
@@ -4665,7 +5559,7 @@
                                     <div>Curabitur vulputate arcu odio, ac facilisis diam</div>
                                     <div>accumsan ut. Ut imperdiet et leo in vulputate.</div>
                                 </div>
-                                <div class="discount-button">
+                                <div class="discount-button" data-action="goto-catalog">
                                     <div class="discount-button-text">Get Discount</div>
                                 </div>
                             </div>
@@ -4681,7 +5575,7 @@
                     </div>
                     <div class="paragraph-1">Nullam pulvinar felis at metus.</div>
                     <div class="paragraph-2">Phasellus risus turpis, pretium sit amet magna non, molestie ultricies enim.</div>
-                    <div class="button">
+                    <div class="button" data-action="goto-catalog">
                         <div class="button-text">View All Items</div>
                     </div>
                 </div>
@@ -4707,28 +5601,40 @@
                                 <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/photo.png" alt="Product 1" class="product-image" data-page="product" data-image="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/photo.png">
                                 <div class="sale-label">SALE</div>
                                 <div class="product-text">Vel vestibulum elit<br>tuvel euqen</div>
-                                <div class="product-price">$250</div>
+                                <div class="price-container">
+                                    <span class="old-price">$277.78</span>
+                                    <span class="new-price">$250</span>
+                                </div>
                                 <button class="add-to-cart-btn" data-product='{"name": "Vel vestibulum elit tuvel euqen", "price": 250, "image": "https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/photo.png"}'>Add to Cart</button>
                             </div>
                             <div class="product-item">
                                 <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/photo%20(1).png" alt="Product 2" class="product-image" data-page="product" data-image="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/photo%20(1).png">
                                 <div class="sale-label">SALE</div>
                                 <div class="product-text">Vel vestibulum elit<br>tuvel euqen</div>
-                                <div class="product-price">$200</div>
+                                <div class="price-container">
+                                    <span class="old-price">$222.22</span>
+                                    <span class="new-price">$200</span>
+                                </div>
                                 <button class="add-to-cart-btn" data-product='{"name": "Vel vestibulum elit tuvel euqen", "price": 200, "image": "https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/photo%20(1).png"}'>Add to Cart</button>
                             </div>
                             <div class="product-item">
                                 <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/photo%20(2).png" alt="Product 3" class="product-image" data-page="product" data-image="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/photo%20(2).png">
                                 <div class="sale-label">SALE</div>
                                 <div class="product-text">Vel vestibulum elit<br>tuvel euqen</div>
-                                <div class="product-price">$300</div>
+                                <div class="price-container">
+                                    <span class="old-price">$333.33</span>
+                                    <span class="new-price">$300</span>
+                                </div>
                                 <button class="add-to-cart-btn" data-product='{"name": "Vel vestibulum elit tuvel euqen", "price": 300, "image": "https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/photo%20(2).png"}'>Add to Cart</button>
                             </div>
                             <div class="product-item">
                                 <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/photo%20(3).png" alt="Product 4" class="product-image" data-page="product" data-image="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/photo%20(3).png">
                                 <div class="sale-label">SALE</div>
                                 <div class="product-text">Vel vestibulum elit<br>tuvel euqen</div>
-                                <div class="product-price">$350</div>
+                                <div class="price-container">
+                                    <span class="old-price">$388.89</span>
+                                    <span class="new-price">$350</span>
+                                </div>
                                 <button class="add-to-cart-btn" data-product='{"name": "Vel vestibulum elit tuvel euqen", "price": 350, "image": "https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/photo%20(3).png"}'>Add to Cart</button>
                             </div>
                         </div>
@@ -4748,7 +5654,7 @@
                             <div class="offer-description offer-description-line1">Curabitur vulputate arcu odio, ac facilisis diam</div>
                             <div class="offer-description">accumsan ut. Ut imperdiet et leo in vulputate.</div>
                             <div class="offer-button-container">
-                                <button class="offer-button">GET OFFER TODAY</button>
+                                <button class="offer-button" data-action="goto-catalog">GET OFFER TODAY</button>
                             </div>
                         </div>
                     </div>
@@ -4765,7 +5671,7 @@
                                     <div>tuvel euqen.</div>
                                 </div>
                                 <div class="new-product-price">$150</div>
-                                <button class="new-view-button">View Product</button>
+                                <button class="new-view-button" data-action="goto-catalog">View Product</button>
                             </div>
                             <div class="new-product-wrapper">
                                 <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/product2.png" alt="Product 2" class="new-product-image product-image" data-page="product" data-image="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/product2.png">
@@ -4774,8 +5680,11 @@
                                     <div>Vel vestibulum elit</div>
                                     <div>tuvel euqen.</div>
                                 </div>
-                                <div class="new-product-price">$450</div>
-                                <button class="new-view-button">View Product</button>
+                                <div class="price-container">
+                                    <span class="old-price">$500.00</span>
+                                    <span class="new-price">$450</span>
+                                </div>
+                                <button class="new-view-button" data-action="goto-catalog">View Product</button>
                             </div>
                             <div class="new-product-wrapper">
                                 <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/product3.png" alt="Product 3" class="new-product-image product-image" data-page="product" data-image="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/product3.png">
@@ -4784,7 +5693,7 @@
                                     <div>tuvel euqen.</div>
                                 </div>
                                 <div class="new-product-price">$250</div>
-                                <button class="new-view-button">View Product</button>
+                                <button class="new-view-button" data-action="goto-catalog">View Product</button>
                             </div>
                             <div class="new-product-wrapper">
                                 <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/product4.png" alt="Product 4" class="new-product-image product-image" data-page="product" data-image="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/product4.png">
@@ -4793,8 +5702,11 @@
                                     <div>Vel vestibulum elit</div>
                                     <div>tuvel euqen.</div>
                                 </div>
-                                <div class="new-product-price">$200</div>
-                                <button class="new-view-button">View Product</button>
+                                <div class="price-container">
+                                    <span class="old-price">$222.22</span>
+                                    <span class="new-price">$200</span>
+                                </div>
+                                <button class="new-view-button" data-action="goto-catalog">View Product</button>
                             </div>
                         </div>
                     </div>
@@ -4945,7 +5857,10 @@
                                             <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog1.png" alt="Валіза 1" class="product-image" data-page="product" data-image="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog1.png">
                                         </div>
                                         <div class="image-text">Vel vestibulum elit<br>tuvel euqen.</div>
-                                        <div class="price">$250</div>
+                                        <div class="price-container">
+                                            <span class="old-price">$277.78</span>
+                                            <span class="new-price">$250</span>
+                                        </div>
                                         <button class="add-to-cart-btn" data-product='{"name": "Vel vestibulum elit tuvel euqen", "price": 250, "image": "https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog1.png"}'>Add To Cart</button>
                                     </div>
                                     <div class="image-container">
@@ -4954,7 +5869,10 @@
                                             <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog2.png" alt="Валіза 2" class="product-image" data-page="product" data-image="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog2.png">
                                         </div>
                                         <div class="image-text">Vel vestibulum elit<br>tuvel euqen.</div>
-                                        <div class="price">$250</div>
+                                        <div class="price-container">
+                                            <span class="old-price">$277.78</span>
+                                            <span class="new-price">$250</span>
+                                        </div>
                                         <button class="add-to-cart-btn" data-product='{"name": "Vel vestibulum elit tuvel euqen", "price": 250, "image": "https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog2.png"}'>Add To Cart</button>
                                     </div>
                                     <div class="image-container">
@@ -4963,7 +5881,10 @@
                                             <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog3.png" alt="Валіза 3" class="product-image" data-page="product" data-image="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog3.png">
                                         </div>
                                         <div class="image-text">Vel vestibulum elit<br>tuvel euqen.</div>
-                                        <div class="price">$250</div>
+                                        <div class="price-container">
+                                            <span class="old-price">$277.78</span>
+                                            <span class="new-price">$250</span>
+                                        </div>
                                         <button class="add-to-cart-btn" data-product='{"name": "Vel vestibulum elit tuvel euqen", "price": 250, "image": "https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog3.png"}'>Add To Cart</button>
                                     </div>
                                 </div>
@@ -4974,7 +5895,10 @@
                                             <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog4.png" alt="Валіза 4" class="product-image" data-page="product" data-image="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog4.png">
                                         </div>
                                         <div class="image-text">Vel vestibulum elit<br>tuvel euqen.</div>
-                                        <div class="price">$250</div>
+                                        <div class="price-container">
+                                            <span class="old-price">$277.78</span>
+                                            <span class="new-price">$250</span>
+                                        </div>
                                         <button class="add-to-cart-btn" data-product='{"name": "Vel vestibulum elit tuvel euqen", "price": 250, "image": "https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog4.png"}'>Add To Cart</button>
                                     </div>
                                     <div class="image-container">
@@ -4983,7 +5907,10 @@
                                             <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog5.png" alt="Валіза 5" class="product-image" data-page="product" data-image="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog5.png">
                                         </div>
                                         <div class="image-text">Vel vestibulum elit<br>tuvel euqen.</div>
-                                        <div class="price">$250</div>
+                                        <div class="price-container">
+                                            <span class="old-price">$277.78</span>
+                                            <span class="new-price">$250</span>
+                                        </div>
                                         <button class="add-to-cart-btn" data-product='{"name": "Vel vestibulum elit tuvel euqen", "price": 250, "image": "https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog5.png"}'>Add To Cart</button>
                                     </div>
                                     <div class="image-container">
@@ -4992,7 +5919,10 @@
                                             <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog6.png" alt="Валіза 6" class="product-image" data-page="product" data-image="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog6.png">
                                         </div>
                                         <div class="image-text">Vel vestibulum elit<br>tuvel euqen.</div>
-                                        <div class="price">$250</div>
+                                        <div class="price-container">
+                                            <span class="old-price">$277.78</span>
+                                            <span class="new-price">$250</span>
+                                        </div>
                                         <button class="add-to-cart-btn" data-product='{"name": "Vel vestibulum elit tuvel euqen", "price": 250, "image": "https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog6.png"}'>Add To Cart</button>
                                     </div>
                                 </div>
@@ -5003,7 +5933,10 @@
                                             <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog7.png" alt="Валіза 7" class="product-image" data-page="product" data-image="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog7.png">
                                         </div>
                                         <div class="image-text">Vel vestibulum elit<br>tuvel euqen.</div>
-                                        <div class="price">$250</div>
+                                        <div class="price-container">
+                                            <span class="old-price">$277.78</span>
+                                            <span class="new-price">$250</span>
+                                        </div>
                                         <button class="add-to-cart-btn" data-product='{"name": "Vel vestibulum elit tuvel euqen", "price": 250, "image": "https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog7.png"}'>Add To Cart</button>
                                     </div>
                                     <div class="image-container">
@@ -5012,7 +5945,10 @@
                                             <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog8.png" alt="Валіза 8" class="product-image" data-page="product" data-image="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog8.png">
                                         </div>
                                         <div class="image-text">Vel vestibulum elit<br>tuvel euqen.</div>
-                                        <div class="price">$250</div>
+                                        <div class="price-container">
+                                            <span class="old-price">$277.78</span>
+                                            <span class="new-price">$250</span>
+                                        </div>
                                         <button class="add-to-cart-btn" data-product='{"name": "Vel vestibulum elit tuvel euqen", "price": 250, "image": "https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog8.png"}'>Add To Cart</button>
                                     </div>
                                     <div class="image-container">
@@ -5021,7 +5957,10 @@
                                             <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog9.png" alt="Валіза 9" class="product-image" data-page="product" data-image="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog9.png">
                                         </div>
                                         <div class="image-text">Vel vestibulum elit<br>tuvel euqen.</div>
-                                        <div class="price">$250</div>
+                                        <div class="price-container">
+                                            <span class="old-price">$277.78</span>
+                                            <span class="new-price">$250</span>
+                                        </div>
                                         <button class="add-to-cart-btn" data-product='{"name": "Vel vestibulum elit tuvel euqen", "price": 250, "image": "https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog9.png"}'>Add To Cart</button>
                                     </div>
                                 </div>
@@ -5032,7 +5971,10 @@
                                             <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog10.png" alt="Валіза 10" class="product-image" data-page="product" data-image="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog10.png">
                                         </div>
                                         <div class="image-text">Vel vestibulum elit<br>tuvel euqen.</div>
-                                        <div class="price">$250</div>
+                                        <div class="price-container">
+                                            <span class="old-price">$277.78</span>
+                                            <span class="new-price">$250</span>
+                                        </div>
                                         <button class="add-to-cart-btn" data-product='{"name": "Vel vestibulum elit tuvel euqen", "price": 250, "image": "https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog10.png"}'>Add To Cart</button>
                                     </div>
                                     <div class="image-container">
@@ -5041,7 +5983,10 @@
                                             <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog11.png" alt="Валіза 11" class="product-image" data-page="product" data-image="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog11.png">
                                         </div>
                                         <div class="image-text">Vel vestibulum elit<br>tuvel euqen.</div>
-                                        <div class="price">$250</div>
+                                        <div class="price-container">
+                                            <span class="old-price">$277.78</span>
+                                            <span class="new-price">$250</span>
+                                        </div>
                                         <button class="add-to-cart-btn" data-product='{"name": "Vel vestibulum elit tuvel euqen", "price": 250, "image": "https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog11.png"}'>Add To Cart</button>
                                     </div>
                                     <div class="image-container">
@@ -5050,7 +5995,10 @@
                                             <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog12.png" alt="Валіза 12" class="product-image" data-page="product" data-image="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog12.png">
                                         </div>
                                         <div class="image-text">Vel vestibulum elit<br>tuvel euqen.</div>
-                                        <div class="price">$250</div>
+                                        <div class="price-container">
+                                            <span class="old-price">$277.78</span>
+                                            <span class="new-price">$250</span>
+                                        </div>
                                         <button class="add-to-cart-btn" data-product='{"name": "Vel vestibulum elit tuvel euqen", "price": 250, "image": "https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog12.png"}'>Add To Cart</button>
                                     </div>
                                 </div>
@@ -5258,7 +6206,7 @@
                     <div class="section-container">
                         <div class="left-side">
                             <div class="new-arrivals-title">New Arrivals Every Week</div>
-                            <button class="see-all-button">See All Models</button>
+                            <button class="see-all-button" data-action="goto-catalog">See All Models</button>
                         </div>
                         <div class="right-side">
                             <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/ac06fd7c37d57115174b35d848fa80e8da9b50b3.jpg" alt="Right side image">
@@ -5304,7 +6252,7 @@
                             <div class="offer-description offer-description-line1">Curabitur vulputate arcu odio, ac facilisis diam</div>
                             <div class="offer-description">accumsan ut. Ut imperdiet et leo in vulputate.</div>
                             <div class="offer-button-container">
-                                <button class="offer-button">GET OFFER TODAY</button>
+                                <button class="offer-button" data-action="goto-catalog">GET OFFER TODAY</button>
                             </div>
                         </div>
                     </div>
@@ -5456,14 +6404,14 @@
                         <div class="feedback-title">Your Feedback Is Much Appreciated!</div>
                         <div class="feedback-subtitle">We will contact you when you complete the following form!</div>
                         <div class="form-label">Your Name *</div>
-                        <input type="text" class="form-input">
+                        <input type="text" class="form-input" id="contact-name">
                         <div class="form-label">Your Email Address *</div>
-                        <input type="email" class="form-input">
+                        <input type="email" class="form-input" id="contact-email">
                         <div class="form-label">Topic *</div>
-                        <input type="text" class="form-input">
+                        <input type="text" class="form-input" id="contact-topic">
                         <div class="form-label">Your Message *</div>
-                        <textarea class="form-textarea"></textarea>
-                        <button class="send-button">SEND</button>
+                        <textarea class="form-textarea" id="contact-message"></textarea>
+                        <button class="send-button" id="contact-send-btn">SEND</button>
                     </div>
                 </div>
 
@@ -5566,26 +6514,6 @@
                         <div class="product-image-section">
                             <img id="main-product-image" src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/global1.png"
                                 alt="Global Image">
-
-                            <!-- Мініатюри -->
-                            <div class="product-thumbnails">
-                                <div class="product-thumbnail">
-                                    <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/global2.png"
-                                        alt="Thumbnail 1">
-                                </div>
-                                <div class="product-thumbnail">
-                                    <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/global3.png"
-                                        alt="Thumbnail 2">
-                                </div>
-                                <div class="product-thumbnail">
-                                    <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/global4.png"
-                                        alt="Thumbnail 3">
-                                </div>
-                                <div class="product-thumbnail">
-                                    <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/global5.png"
-                                        alt="Thumbnail 4">
-                                </div>
-                            </div>
                         </div>
                         <div class="product-text-section">
                             <div class="product-text-line">Global Explorer Max Comfort</div>
@@ -5698,8 +6626,78 @@
                     </div>
 
                     <div class="product-tab-content" id="reviews-tab">
-                        <!-- Тут може бути вміст відгуків, якщо потрібно -->
-                        <p>Reviews content will be displayed here when available.</p>
+                        <!-- Вміст відгуків -->
+                        <div class="reviews-container">
+                            <div class="reviews-split-section">
+                                <div class="reviews-left-half">
+                                    <div class="review-count">1 review for Global Explorer Max Comfort Suitcase Pro</div>
+                                </div>
+                                <div class="reviews-right-half">
+                                    <div class="add-review-section">
+                                        <div class="add-review-text">Add Review</div>
+                                        <div class="email-note">Your email address won't be shared with anybody. Required fields
+                                            have the
+                                            symbol *</div>
+                                        <div class="rate-product-container">
+                                            <div class="rate-product">RATE PRODUCT</div>
+                                            <div class="rate-stars">
+                                                <span class="rate-star">★</span>
+                                                <span class="rate-star">★</span>
+                                                <span class="rate-star">★</span>
+                                                <span class="rate-star">★</span>
+                                                <span class="rate-star">★</span>
+                                            </div>
+                                        </div>
+                                        <div class="review-rectangle">
+                                            <textarea class="review-textarea" placeholder=" "></textarea>
+                                            <div class="review-label">Your Review*</div>
+                                        </div>
+                                        <div class="small-rectangles-container">
+                                            <div class="small-rectangle">
+                                                <input type="text" class="small-input" placeholder=" ">
+                                                <div class="field-label">Your Name*</div>
+                                            </div>
+                                            <div class="small-rectangle">
+                                                <input type="email" class="small-input" placeholder=" ">
+                                                <div class="field-label">Your Email*</div>
+                                            </div>
+                                        </div>
+                                        <div class="save-info-container">
+                                            <div class="checkbox-square"></div>
+                                            <div class="save-text">Save my name, email, and website in this browser for when I leave
+                                                another
+                                                comment.</div>
+                                        </div>
+                                        <button class="reviews-submit-btn">SUBMIT</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reviews-image-container">
+                                <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/img.png"
+                                    alt="Review" class="review-image">
+                                <div class="review-content">
+                                    <div class="reviewer-info">
+                                        <div class="reviewer-name">Ella Harper</div>
+                                        <div class="review-date">/ June 11, 2025</div>
+                                        <div class="review-stars">
+                                            <span class="review-star yellow">★</span>
+                                            <span class="review-star yellow">★</span>
+                                            <span class="review-star yellow">★</span>
+                                            <span class="review-star yellow">★</span>
+                                            <span class="review-star gray">★</span>
+                                        </div>
+                                    </div>
+                                    <div class="review-text">
+                                        Proin iaculis nibh vitae lectus mollis bibendum. Quisque<br>
+                                        varius eget urna sit amet luctus. Suspendisse potenti<br>
+                                        curabitur ac placerat est, sit amet sodales risus.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="user-reviews-container" id="user-reviews-container">
+                                <!-- Тут будуть додаватися відгуки користувачів -->
+                            </div>
+                        </div>
                     </div>
 
                     <div class="product-tab-content" id="shipping-tab">
@@ -5723,7 +6721,10 @@
                                 <div class="product-details">
                                     <p class="product-line">Vel vestibulum elit</p>
                                     <p class="product-line">tuvel euqen.</p>
-                                    <p class="product-recommendation-price">$200</p>
+                                    <div class="price-container">
+                                        <span class="old-price">$222.22</span>
+                                        <span class="new-price">$200</span>
+                                    </div>
                                     <div class="product-recommendation-add-to-cart" data-product='{"name": "Vel vestibulum elit tuvel euqen", "price": 200, "image": "https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/Like1.png"}'>
                                         <span class="product-recommendation-add-to-cart-text">Add To Cart</span>
                                     </div>
@@ -5735,7 +6736,7 @@
                                 <div class="product-details">
                                     <p class="product-line">Vel vestibulum elit</p>
                                     <p class="product-line">tuvel euqen.</p>
-                                    <p class="product-recommendation-price">$200</p>
+                                    <div class="product-recommendation-price">$200</div>
                                     <div class="product-recommendation-add-to-cart" data-product='{"name": "Vel vestibulum elit tuvel euqen", "price": 200, "image": "https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog3.png"}'>
                                         <span class="product-recommendation-add-to-cart-text">Add To Cart</span>
                                     </div>
@@ -5750,7 +6751,10 @@
                                 <div class="product-details">
                                     <p class="product-line">Vel vestibulum elit</p>
                                     <p class="product-line">tuvel euqen.</p>
-                                    <p class="product-recommendation-price">$200</p>
+                                    <div class="price-container">
+                                        <span class="old-price">$222.22</span>
+                                        <span class="new-price">$200</span>
+                                    </div>
                                     <div class="product-recommendation-add-to-cart" data-product='{"name": "Vel vestibulum elit tuvel euqen", "price": 200, "image": "https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/Like3.png"}'>
                                         <span class="product-recommendation-add-to-cart-text">Add To Cart</span>
                                     </div>
@@ -5762,7 +6766,7 @@
                                 <div class="product-details">
                                     <p class="product-line">Vel vestibulum elit</p>
                                     <p class="product-line">tuvel euqen.</p>
-                                    <p class="product-recommendation-price">$200</p>
+                                    <div class="product-recommendation-price">$200</div>
                                     <div class="product-recommendation-add-to-cart" data-product='{"name": "Vel vestibulum elit tuvel euqen", "price": 200, "image": "https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/Like4.png"}'>
                                         <span class="product-recommendation-add-to-cart-text">Add To Cart</span>
                                     </div>
@@ -6615,6 +7619,12 @@
 
         // Функція для зміни сторінки
         function loadPage(page) {
+            // Якщо користувач не залогінений і намагається перейти на сторінку корзини, показуємо модальне вікно логіну
+            if (page === 'user' && !isLoggedIn) {
+                openLoginModal();
+                return;
+            }
+
             const container = document.getElementById('content-container');
             const navLinks = document.querySelectorAll('.nav-link');
 
@@ -6644,6 +7654,7 @@
                     setupProductPage();
                     setupProductTabs();
                     setupAddToCart();
+                    setupReviewsForm();
                 }
 
                 // Додаємо обробники для сторінки корзини
@@ -6654,6 +7665,11 @@
 
                 // Додаємо обробники подій для кнопок Add to Cart
                 setupAddToCartButtons();
+
+                // Додаємо обробники для контактної форми
+                if (page === 'contact') {
+                    setupContactForm();
+                }
 
                 // Прокручуємо на початок сторінки
                 window.scrollTo(0, 0);
@@ -6670,13 +7686,6 @@
                     mainImage.src = clickedImageUrl;
                     sessionStorage.removeItem('clickedProductImage');
                 }
-
-                // Додаємо обробники для мініатюр
-                document.querySelectorAll('.product-thumbnail img').forEach(thumb => {
-                    thumb.addEventListener('click', function() {
-                        mainImage.src = this.src;
-                    });
-                });
             }
         }
 
@@ -6932,6 +7941,101 @@
             }, 3000);
         }
 
+        // Функція для показу сповіщення про відгук
+        function showReviewNotification() {
+            const notification = document.createElement('div');
+            notification.style.position = 'fixed';
+            notification.style.top = '20px';
+            notification.style.right = '20px';
+            notification.style.backgroundColor = 'rgba(185, 39, 112, 0.9)';
+            notification.style.color = 'white';
+            notification.style.padding = '15px 20px';
+            notification.style.borderRadius = '5px';
+            notification.style.zIndex = '10000';
+            notification.style.boxShadow = '0 4px 8px rgba(0,0,0,0.2)';
+            notification.style.fontFamily = 'Montserrat', sans-serif;
+            notification.style.fontSize = '16px';
+            notification.style.transition = 'all 0.3s ease';
+            
+            notification.innerHTML = `
+                <div>Your review has been submitted successfully!</div>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // Автоматично видаляємо сповіщення через 3 секунди
+            setTimeout(() => {
+                notification.style.opacity = '0';
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        notification.parentNode.removeChild(notification);
+                    }
+                }, 300);
+            }, 3000);
+        }
+
+        // Функція для налаштування контактної форми
+        function setupContactForm() {
+            const sendButton = document.getElementById('contact-send-btn');
+            if (sendButton) {
+                sendButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const name = document.getElementById('contact-name').value;
+                    const email = document.getElementById('contact-email').value;
+                    const topic = document.getElementById('contact-topic').value;
+                    const message = document.getElementById('contact-message').value;
+                    
+                    // Перевірка заповненості обов'язкових полів
+                    if (!name || !email || !topic || !message) {
+                        return;
+                    }
+                    
+                    // Показуємо сповіщення про успішне відправлення
+                    showContactNotification();
+                    
+                    // Очищаємо форму
+                    document.getElementById('contact-name').value = '';
+                    document.getElementById('contact-email').value = '';
+                    document.getElementById('contact-topic').value = '';
+                    document.getElementById('contact-message').value = '';
+                });
+            }
+        }
+
+        // Функція для показу сповіщення про відправлення контактної форми
+        function showContactNotification() {
+            const notification = document.createElement('div');
+            notification.style.position = 'fixed';
+            notification.style.top = '20px';
+            notification.style.right = '20px';
+            notification.style.backgroundColor = 'rgba(185, 39, 112, 0.9)';
+            notification.style.color = 'white';
+            notification.style.padding = '15px 20px';
+            notification.style.borderRadius = '5px';
+            notification.style.zIndex = '10000';
+            notification.style.boxShadow = '0 4px 8px rgba(0,0,0,0.2)';
+            notification.style.fontFamily = 'Montserrat', sans-serif;
+            notification.style.fontSize = '16px';
+            notification.style.transition = 'all 0.3s ease';
+            
+            notification.innerHTML = `
+                <div>Your message has been sent successfully!</div>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // Автоматично видаляємо сповіщення через 3 секунди
+            setTimeout(() => {
+                notification.style.opacity = '0';
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        notification.parentNode.removeChild(notification);
+                    }
+                }, 300);
+            }, 3000);
+        }
+
         // Додаємо обробники подій для навігації
         document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', (e) => {
@@ -6943,10 +8047,14 @@
             });
         });
 
-        // Додаємо обробник для іконки користувача
+        // ЗМІНА: Змінюємо обробник для іконки користувача
         document.querySelector('.user-icon').addEventListener('click', (e) => {
             e.preventDefault();
-            loadPage('user');
+            if (isLoggedIn) {
+                loadPage('user');
+            } else {
+                openLoginModal();
+            }
         });
 
         // Додаємо обробник для іконки корзини
@@ -6957,7 +8065,10 @@
 
         // Завантажуємо домашню сторінку при завантаженні
         document.addEventListener('DOMContentLoaded', () => {
-            loadPage('home');
+            checkRememberedUser();
+            if (!isLoggedIn) {
+                loadPage('home');
+            }
             updateCartDisplay();
         });
 
@@ -6999,14 +8110,6 @@
             }
         });
 
-        // Додаємо обробник для контактної форми
-        document.addEventListener('submit', (e) => {
-            if (e.target && e.target.id === 'contactForm') {
-                e.preventDefault();
-                e.target.reset();
-            }
-        });
-
         // Функція для додавання обробників подій для зображень продуктів
         function addProductImageListeners() {
             const productImages = document.querySelectorAll('.product-image, .suitcase-image, .new-product-image');
@@ -7037,13 +8140,9 @@
                     tab.classList.add('active');
 
                     // Показуємо відповідний контент
-                    if (tabId === 'reviews') {
-                        openReviewsModal();
-                    } else {
-                        const content = document.getElementById(`${tabId}-tab`);
-                        if (content) {
-                            content.classList.add('active');
-                        }
+                    const content = document.getElementById(`${tabId}-tab`);
+                    if (content) {
+                        content.classList.add('active');
                     }
                 });
             });
@@ -7071,13 +8170,160 @@
             updateCartSummary();
         }
 
-        // Функції для модального вікна відгуків
-        function openReviewsModal() {
-            document.getElementById('reviews-modal').style.display = 'flex';
+        // Функції для модального вікна логіну
+        function openLoginModal() {
+            document.getElementById('login-modal').style.display = 'flex';
         }
 
-        function closeReviewsModal() {
-            document.getElementById('reviews-modal').style.display = 'none';
+        function closeLoginModal() {
+            document.getElementById('login-modal').style.display = 'none';
+        }
+
+        // Функція для налаштування форми відгуків
+        function setupReviewsForm() {
+            // Налаштування зірочок для оцінки
+            const stars = document.querySelectorAll('.rate-star');
+            let currentRating = 0;
+
+            stars.forEach((star, index) => {
+                star.addEventListener('click', () => {
+                    currentRating = index + 1;
+                    updateStars(stars, currentRating);
+                });
+
+                star.addEventListener('mouseover', () => {
+                    updateStars(stars, index + 1);
+                });
+
+                star.addEventListener('mouseout', () => {
+                    updateStars(stars, currentRating);
+                });
+            });
+
+            // Налаштування полів форми
+            setupFormField('.review-rectangle', '.review-textarea', '.review-label');
+            setupFormField('.small-rectangle:first-child', '.small-input', '.field-label');
+            setupFormField('.small-rectangle:last-child', '.small-input', '.field-label');
+
+            // Налаштування чекбоксу
+            const checkbox = document.querySelector('.checkbox-square');
+            checkbox.addEventListener('click', function() {
+                this.classList.toggle('checked');
+            });
+
+            // Налаштування кнопки відправки
+            const submitBtn = document.querySelector('.reviews-submit-btn');
+            submitBtn.addEventListener('click', submitReview);
+        }
+
+        // Функція для оновлення зірочок
+        function updateStars(stars, rating) {
+            stars.forEach((star, index) => {
+                if (index < rating) {
+                    star.classList.add('active');
+                } else {
+                    star.classList.remove('active');
+                }
+            });
+        }
+
+        // Функція для налаштування полів форми
+        function setupFormField(containerSelector, inputSelector, labelSelector) {
+            const container = document.querySelector(containerSelector);
+            const input = document.querySelector(inputSelector);
+            const label = document.querySelector(labelSelector);
+
+            if (input && label) {
+                input.addEventListener('focus', () => {
+                    container.classList.add('focused');
+                });
+
+                input.addEventListener('blur', () => {
+                    if (!input.value) {
+                        container.classList.remove('focused');
+                    }
+                });
+
+                // Якщо поле вже має значення при завантаженні
+                if (input.value) {
+                    container.classList.add('focused');
+                }
+            }
+        }
+
+        // Функція для відправки відгуку
+        function submitReview() {
+            const nameInput = document.querySelector('.small-rectangle:first-child .small-input');
+            const emailInput = document.querySelector('.small-rectangle:last-child .small-input');
+            const reviewTextarea = document.querySelector('.review-textarea');
+            const stars = document.querySelectorAll('.rate-star.active');
+
+            // Перевірка заповненості обов'язкових полів
+            if (!nameInput.value || !emailInput.value || !reviewTextarea.value || stars.length === 0) {
+                return;
+            }
+
+            // Створення нового відгуку
+            const newReview = {
+                name: nameInput.value,
+                email: emailInput.value,
+                review: reviewTextarea.value,
+                rating: stars.length,
+                date: new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
+            };
+
+            // Додавання відгуку до масиву
+            userReviews.push(newReview);
+
+            // Оновлення відображення відгуків
+            displayUserReviews();
+
+            // Очищення форми
+            nameInput.value = '';
+            emailInput.value = '';
+            reviewTextarea.value = '';
+            document.querySelectorAll('.rate-star').forEach(star => star.classList.remove('active'));
+            document.querySelectorAll('.small-rectangle, .review-rectangle').forEach(container => {
+                container.classList.remove('focused');
+            });
+            document.querySelector('.checkbox-square').classList.remove('checked');
+
+            // Показ сповіщення
+            showReviewNotification();
+        }
+
+        // Функція для відображення відгуків користувачів
+        function displayUserReviews() {
+            const container = document.getElementById('user-reviews-container');
+            if (!container) return;
+
+            container.innerHTML = '';
+
+            if (userReviews.length === 0) {
+                return;
+            }
+
+            userReviews.forEach(review => {
+                const reviewElement = document.createElement('div');
+                reviewElement.className = 'user-review';
+
+                const starsHtml = '★'.repeat(review.rating) + '☆'.repeat(5 - review.rating);
+
+                reviewElement.innerHTML = `
+                    <div class="user-review-header">
+                        <div class="user-review-name">${review.name}</div>
+                        <div class="user-review-date">${review.date}</div>
+                    </div>
+                    <div class="user-review-stars">
+                        ${starsHtml.split('').map(star => 
+                            `<span class="${star === '★' ? 'review-star yellow' : 'review-star gray'}">${star}</span>`
+                        ).join('')}
+                    </div>
+                    <div class="user-review-text">${review.review}</div>
+                `;
+
+                container.appendChild(reviewElement);
+            });
         }
 
         // Функції для модального вікна корзини
@@ -7092,8 +8338,8 @@
 
         // Додаємо обробники подій для модальних вікон
         document.addEventListener('click', (e) => {
-            if (e.target.classList.contains('close-reviews') || e.target.id === 'reviews-modal') {
-                closeReviewsModal();
+            if (e.target.classList.contains('close-login') || e.target.id === 'login-modal') {
+                closeLoginModal();
             }
             if (e.target.classList.contains('close-cart') || e.target.id === 'cart-modal') {
                 closeCartModal();
@@ -7115,7 +8361,58 @@
                 quantityElement.textContent = quantity;
             }
         });
+
+        // Додаємо обробник для форми логіну
+        document.getElementById('login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const rememberMe = document.getElementById('remember-checkbox').classList.contains('checked');
+
+            // Перевірка заповненості полів
+            if (!email || !password) {
+                return;
+            }
+
+            // Якщо вибрано "Remember me", зберігаємо дані
+            if (rememberMe) {
+                rememberUser(email, password);
+            } else {
+                forgetUser();
+            }
+
+            // Встановлюємо статус залогіненого користувача
+            isLoggedIn = true;
+
+            closeLoginModal();
+            loadPage('user');
+        });
+
+        // Додаємо обробник для перемикання видимості пароля
+        document.getElementById('togglePassword').addEventListener('click', function () {
+            const passwordInput = document.getElementById('password');
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+        });
+
+        // Додаємо обробник для чекбоксу "Remember me"
+        document.getElementById('remember-checkbox').addEventListener('click', function() {
+            this.classList.toggle('checked');
+        });
+
+        // Додаємо обробник для кнопок з data-action="goto-catalog"
+        document.addEventListener('click', function(e) {
+            let target = e.target;
+            // Якщо клікнули на дочірній елемент, то піднімаємося до елемента з data-action
+            if (!target.hasAttribute('data-action')) {
+                target = target.closest('[data-action]');
+            }
+            if (target && target.getAttribute('data-action') === 'goto-catalog') {
+                e.preventDefault();
+                loadPage('catalog');
+            }
+        });
     </script>
 </body>
 
-</html>
+</html> 
