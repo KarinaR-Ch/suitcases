@@ -8136,10 +8136,10 @@
                     tabs.forEach(t => t.classList.remove('active'));
                     tabContents.forEach(content => content.classList.remove('active'));
 
-                    // Додаємо активний клас до поточної вкладки
+                    // active class to current tab
                     tab.classList.add('active');
 
-                    // Показуємо відповідний контент
+                    // We show relevant content
                     const content = document.getElementById(`${tabId}-tab`);
                     if (content) {
                         content.classList.add('active');
@@ -8148,7 +8148,7 @@
             });
         }
 
-        // Функція для налаштування кнопки Add to Cart
+        // Function for customizing the Add to Cart button
         function setupAddToCart() {
             const addToCartButtons = document.querySelectorAll('.product-add-to-cart, .product-add-to-cart-text, .product-recommendation-add-to-cart, .product-recommendation-add-to-cart-text');
 
@@ -8164,13 +8164,13 @@
             });
         }
 
-        // Функція для налаштування сторінки корзини
+        // Cart page customization feature
         function setupCartPage() {
             updateCartPage();
             updateCartSummary();
         }
 
-        // Функції для модального вікна логіну
+        // Functions for the modal login window
         function openLoginModal() {
             document.getElementById('login-modal').style.display = 'flex';
         }
@@ -8179,9 +8179,9 @@
             document.getElementById('login-modal').style.display = 'none';
         }
 
-        // Функція для налаштування форми відгуків
+        // Feedback form customization feature
         function setupReviewsForm() {
-            // Налаштування зірочок для оцінки
+            // Setting stars for rating
             const stars = document.querySelectorAll('.rate-star');
             let currentRating = 0;
 
@@ -8200,23 +8200,23 @@
                 });
             });
 
-            // Налаштування полів форми
+            // Configuring form fields
             setupFormField('.review-rectangle', '.review-textarea', '.review-label');
             setupFormField('.small-rectangle:first-child', '.small-input', '.field-label');
             setupFormField('.small-rectangle:last-child', '.small-input', '.field-label');
 
-            // Налаштування чекбоксу
+            // Checkbox settings
             const checkbox = document.querySelector('.checkbox-square');
             checkbox.addEventListener('click', function() {
                 this.classList.toggle('checked');
             });
 
-            // Налаштування кнопки відправки
+            // Send button settings
             const submitBtn = document.querySelector('.reviews-submit-btn');
             submitBtn.addEventListener('click', submitReview);
         }
 
-        // Функція для оновлення зірочок
+        // Feature to update stars
         function updateStars(stars, rating) {
             stars.forEach((star, index) => {
                 if (index < rating) {
@@ -8227,7 +8227,7 @@
             });
         }
 
-        // Функція для налаштування полів форми
+        // Function for customizing form fields
         function setupFormField(containerSelector, inputSelector, labelSelector) {
             const container = document.querySelector(containerSelector);
             const input = document.querySelector(inputSelector);
@@ -8244,26 +8244,26 @@
                     }
                 });
 
-                // Якщо поле вже має значення при завантаженні
+                // If the field already has a value when loaded
                 if (input.value) {
                     container.classList.add('focused');
                 }
             }
         }
 
-        // Функція для відправки відгуку
+        // Function for sending feedback
         function submitReview() {
             const nameInput = document.querySelector('.small-rectangle:first-child .small-input');
             const emailInput = document.querySelector('.small-rectangle:last-child .small-input');
             const reviewTextarea = document.querySelector('.review-textarea');
             const stars = document.querySelectorAll('.rate-star.active');
 
-            // Перевірка заповненості обов'язкових полів
+            // Checking that required fields are complete
             if (!nameInput.value || !emailInput.value || !reviewTextarea.value || stars.length === 0) {
                 return;
             }
 
-            // Створення нового відгуку
+            // Create a new review
             const newReview = {
                 name: nameInput.value,
                 email: emailInput.value,
@@ -8272,13 +8272,13 @@
                 date: new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
             };
 
-            // Додавання відгуку до масиву
+            // Feedback to the array
             userReviews.push(newReview);
 
-            // Оновлення відображення відгуків
+            // Update feedback display
             displayUserReviews();
 
-            // Очищення форми
+            // Form cleaning
             nameInput.value = '';
             emailInput.value = '';
             reviewTextarea.value = '';
@@ -8288,11 +8288,11 @@
             });
             document.querySelector('.checkbox-square').classList.remove('checked');
 
-            // Показ сповіщення
+            // Display notification
             showReviewNotification();
         }
 
-        // Функція для відображення відгуків користувачів
+        // User feedback display feature
         function displayUserReviews() {
             const container = document.getElementById('user-reviews-container');
             if (!container) return;
@@ -8326,7 +8326,7 @@
             });
         }
 
-        // Функції для модального вікна корзини
+        // Functions for the modal shopping cart window
         function openCartModal() {
             updateCartModal();
             document.getElementById('cart-modal').style.display = 'flex';
@@ -8336,7 +8336,7 @@
             document.getElementById('cart-modal').style.display = 'none';
         }
 
-        // Додаємо обробники подій для модальних вікон
+        // Event handlers for modal windows
         document.addEventListener('click', (e) => {
             if (e.target.classList.contains('close-login') || e.target.id === 'login-modal') {
                 closeLoginModal();
@@ -8346,7 +8346,7 @@
             }
         });
 
-        // Додаємо обробники подій для кнопок quantity на сторінці продукту
+        // Descriptions for quantity buttons on a product page
         document.addEventListener('click', (e) => {
             if (e.target.classList.contains('product-quantity-button')) {
                 const quantityElement = e.target.parentElement.querySelector('.product-quantity-number');
@@ -8362,45 +8362,45 @@
             }
         });
 
-        // Додаємо обробник для форми логіну
+        // Compiler for login form
         document.getElementById('login-form').addEventListener('submit', function(e) {
             e.preventDefault();
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
             const rememberMe = document.getElementById('remember-checkbox').classList.contains('checked');
 
-            // Перевірка заповненості полів
+            // Checking the completeness of fields
             if (!email || !password) {
                 return;
             }
 
-            // Якщо вибрано "Remember me", зберігаємо дані
+            // When "Remember me" is selected, data is saved
             if (rememberMe) {
                 rememberUser(email, password);
             } else {
                 forgetUser();
             }
 
-            // Встановлюємо статус залогіненого користувача
+            // Status of a registered client
             isLoggedIn = true;
 
             closeLoginModal();
             loadPage('user');
         });
 
-        // Додаємо обробник для перемикання видимості пароля
+        // Tool for changing password visibility
         document.getElementById('togglePassword').addEventListener('click', function () {
             const passwordInput = document.getElementById('password');
             const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
             passwordInput.setAttribute('type', type);
         });
 
-        // Додаємо обробник для чекбоксу "Remember me"
+        // Compiler for checkbox "Remember me"
         document.getElementById('remember-checkbox').addEventListener('click', function() {
             this.classList.toggle('checked');
         });
 
-        // Додаємо обробник для кнопок з data-action="goto-catalog"
+        // Collector for buttons data-action="goto-catalog"
         document.addEventListener('click', function(e) {
             let target = e.target;
             // Якщо клікнули на дочірній елемент, то піднімаємося до елемента з data-action
