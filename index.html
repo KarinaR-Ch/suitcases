@@ -22,7 +22,7 @@
             overflow-x: hidden;
         }
 
-        /* Навігація */
+        /* Navigation */
         .header-frame {
             width: 90%;
             max-width: 1313px;
@@ -207,7 +207,7 @@
             background-color: rgba(185, 39, 112, 0.1);
         }
 
-        /* Контейнер для контенту */
+        /* Content container */
         .content-container {
             opacity: 1;
             transition: opacity 0.5s ease-in-out;
@@ -218,12 +218,12 @@
             opacity: 0;
         }
 
-        /* ЗМІНА: Зсув картинок каталогу на 500px вліво замість 400px */
+        /* CHANGE: Shift catalog images 500px left instead of 400px */
         .catalog-section .image-row {
             transform: translateY(280px) translateX(-500px);
         }
 
-        /* Адаптивність */
+        /* Responsiveness */
         @media (max-width: 768px) {
             .header-frame {
                 margin: 30px auto;
@@ -259,7 +259,7 @@
                 padding: 8px 12px;
             }
 
-            /* ЗМІНА: Зсув всього контенту після 3 картинок, тексту і кнопки на 50px вниз */
+            /* CHANGE: Shift all content after 3 images, text and button down 50px */
             .selected-products-section,
             .offer-section,
             .new-products-section,
@@ -268,30 +268,30 @@
                 transform: translateY(50px);
             }
 
-            /* НОВИЙ СТИЛЬ: Зсув контенту після першого ряду в каталозі на 100px */
+            /* NEW STYLE: Shift content after first row in catalog down 100px */
             .catalog-section .image-row~.image-row,
             .catalog-section .pagination,
             .catalog-section .sidebar {
                 margin-top: 100px;
             }
 
-            /* НОВИЙ СТИЛЬ: Опускаємо пагінацію (1 2 next) і все що нижче на 100px в каталозі */
+            /* NEW STYLE: Lower pagination (1 2 next) and everything below by 100px in catalog */
             .catalog-section .pagination,
             .catalog-section .footer-section {
                 transform: translateY(100px);
             }
 
-            /* НОВИЙ СТИЛЬ: Продовжуємо білий прямокутник з тінню до кінця пагінації */
+            /* NEW STYLE: Extend white rectangle with shadow to end of pagination */
             .catalog-section .container {
                 padding-bottom: 150px;
             }
 
-            /* НОВИЙ СТИЛЬ: Піднімаємо зображення валізи на 200px в мобільній версії */
+            /* NEW STYLE: Lift suitcase image up 200px in mobile version */
             .gray-rectangle .image-container {
                 top: calc(50% - 80px) !important;
             }
 
-            /* Скидаємо зсув для мобільної версії */
+            /* Reset shift for mobile version */
             .catalog-section .image-row {
                 transform: translateY(280px);
             }
@@ -324,13 +324,13 @@
                 padding: 6px 10px;
             }
 
-            /* НОВИЙ СТИЛЬ: Піднімаємо зображення валізи на 200px в мобільній версії */
+            /* NEW STYLE: Lift suitcase image up 200px in mobile version */
             .gray-rectangle .image-container {
                 top: calc(50% - 80px) !important;
             }
         }
 
-        /* Стилі для Home сторінки */
+        /* Styles for Home page */
         .gray-rectangle {
             width: 100%;
             height: 861px;
@@ -519,7 +519,7 @@
             white-space: nowrap;
         }
 
-        /* ЗМІНА: Піднімаємо зображення валізи на 300px вгору в комп'ютерній версії */
+        /* CHANGE: Lift suitcase image up 300px in desktop version */
         .image-container {
             position: absolute;
             width: 651px;
@@ -1416,7 +1416,7 @@
             padding: 20px 0;
         }
 
-        /* Стилі для Catalog сторінки */
+        /* Styles for Catalog page */
         .catalog-section {
             margin-top: 30px;
             padding: 0 20px;
@@ -1937,7 +1937,7 @@
             padding: 20px 0;
         }
 
-        /* Адаптивність для контенту */
+        /* Responsiveness for content */
         @media (max-width: 1200px) {
             .white-top-rectangle {
                 width: 1000px;
@@ -2640,7 +2640,7 @@
             }
         }
 
-        /* Стилі для Contact Us сторінки */
+        /* Styles for Contact Us page */
         .contact-hero-section {
             margin-top: 30px;
         }
@@ -2797,7 +2797,7 @@
             text-transform: uppercase;
         }
 
-        /* Медіа-запити для Contact Us */
+        /* Media queries for Contact Us */
         @media (max-width: 768px) {
             .contact-hero-image {
                 height: 400px;
@@ -2943,7 +2943,7 @@
             }
         }
 
-        /* Стилі для сторінки продукту */
+        /* Styles for product page */
         .product-page {
             transform: scale(0.9);
             transform-origin: top center;
@@ -3396,7 +3396,7 @@
             color: white;
         }
 
-        /* Стилі для сторінки відгуків */
+        /* Styles for reviews page */
         .reviews-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -4144,7 +4144,7 @@
             }
         }
 
-        /* Стилі для сторінки корзини (user) */
+        /* Styles for cart page (user) */
         .full-width-image {
             width: 100%;
             height: 229px;
@@ -4458,7 +4458,7 @@
             background: rgba(165, 29, 92, 1);
         }
 
-        /* ВИПРАВЛЕННЯ ДЛЯ МОБІЛЬНОЇ ВЕРСІЇ СТОРІНКИ MY CART */
+        /* FIXES FOR MOBILE VERSION OF MY CART PAGE */
         @media (max-width: 768px) {
             .table-container {
                 height: auto;
@@ -4671,7 +4671,7 @@
             }
         }
 
-        /* Стилі для модального вікна корзини */
+        /* Styles for cart modal */
         .cart-modal {
             display: none;
             position: fixed;
@@ -4821,7 +4821,7 @@
             }
         }
 
-        /* НОВІ СТИЛІ ДЛЯ ПЕРЕКРЕСЛЕНИХ ЦІН */
+        /* NEW STYLES FOR CROSSED-OUT PRICES */
         .old-price {
             text-decoration: line-through;
             color: #999;
@@ -4843,7 +4843,7 @@
             margin-top: 10px;
         }
 
-        /* Стилі для модального вікна логіну */
+        /* Styles for login modal */
         .login-modal {
             display: none;
             position: fixed;
@@ -5041,7 +5041,7 @@
             }
         }
 
-        /* АДАПТАЦІЯ СТОРІНКИ ПРОДУКТУ ДЛЯ МОБІЛЬНИХ ПРИСТРОЇВ */
+        /* PRODUCT PAGE ADAPTATION FOR MOBILE DEVICES */
         @media (max-width: 768px) {
             .product-page {
                 transform: none;
@@ -5263,7 +5263,7 @@
             }
         }
 
-        /* АДАПТАЦІЯ ФОРМИ ВІДГУКІВ ДЛЯ МОБІЛЬНИХ */
+        /* REVIEW FORM ADAPTATION FOR MOBILE */
         @media (max-width: 768px) {
             .reviews-container {
                 padding: 15px;
@@ -5349,7 +5349,7 @@
 </head>
 
 <body>
-    <!-- Навігація -->
+    <!-- Navigation -->
     <div class="header-frame">
         <header>
             <div class="social">
@@ -5399,12 +5399,12 @@
         </nav>
     </div>
 
-    <!-- Контейнер для вмісту -->
+    <!-- Content container -->
     <div class="content-container" id="content-container">
-        <!-- Тут буде відображатися вміст сторінок -->
+        <!-- Page content will be displayed here -->
     </div>
 
-    <!-- Модальне вікно для логіну -->
+    <!-- Login modal -->
     <div id="login-modal" class="login-modal">
         <div class="login-container">
             <span class="close-login" onclick="closeLoginModal()">×</span>
@@ -5437,11 +5437,11 @@
         </div>
     </div>
 
-    <!-- Модальне вікно для корзини -->
+    <!-- Cart modal -->
     <div id="cart-modal" class="cart-modal">
         <div class="cart-modal-content">
             <span class="close-cart" onclick="closeCartModal()">×</span>
-            <!-- Вміст корзини -->
+            <!-- Cart content -->
             <div class="cart-rectangle">
                 <table class="cart-price-table">
                     <tr>
@@ -5494,12 +5494,12 @@
     </div>
 
     <script>
-        // Глобальна змінна для кошика
+        // Global variable for cart
         let cart = [];
         let userReviews = [];
         let isLoggedIn = false;
 
-        // Перевірка, чи є збережені дані користувача в sessionStorage
+        // Check if user data is saved in sessionStorage
         function checkRememberedUser() {
             const rememberedUser = sessionStorage.getItem('rememberedUser');
             if (rememberedUser) {
@@ -5508,12 +5508,12 @@
                 document.getElementById('password').value = userData.password;
                 document.getElementById('remember-checkbox').classList.add('checked');
                 isLoggedIn = true;
-                // Автоматично переходимо на сторінку корзини, якщо користувач запам'ятований
+                // Automatically go to cart page if user is remembered
                 loadPage('user');
             }
         }
 
-        // Збереження даних користувача в sessionStorage
+        // Save user data to sessionStorage
         function rememberUser(email, password) {
             const userData = {
                 email: email,
@@ -5522,18 +5522,18 @@
             sessionStorage.setItem('rememberedUser', JSON.stringify(userData));
         }
 
-        // Видалення збережених даних користувача
+        // Remove saved user data
         function forgetUser() {
             sessionStorage.removeItem('rememberedUser');
         }
 
-        // Вміст сторінок
+        // Page content
         const pages = {
             home: `
                 <div class="gray-rectangle">
                     <div class="white-top-rectangle">
                         <div class="white-top-left">
-                            <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/d1cd40ce6d48283d0926de63f56b548aee9106c4.png" alt="Додаткове зображення">
+                            <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/d1cd40ce6d48283d0926de63f56b548aee9106c4.png" alt="Additional image">
                             <div class="text-content">
                                 <div class="name-text">Lillian Bennett</div>
                                 <div class="position-text">Chief Marketing Officer</div>
@@ -5563,11 +5563,11 @@
                                     <div class="discount-button-text">Get Discount</div>
                                 </div>
                             </div>
-                            <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/photo%20(5).png" alt="Додаткове зображення">
+                            <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/photo%20(5).png" alt="Additional image">
                         </div>
                     </div>
                     <div class="image-container">
-                        <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/656c36b623decb2b538d17585f8f19fb0ab685a8.png" alt="Валізка">
+                        <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/656c36b623decb2b538d17585f8f19fb0ab685a8.png" alt="Suitcase">
                     </div>
                     <div class="text-container">
                         <span class="text-line">Smart Styles for</span>
@@ -5643,7 +5643,7 @@
                 <div class="offer-section">
                     <div class="offer-container">
                         <div class="offer-image-container">
-                            <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/photo%20(4).png" alt="Зображення">
+                            <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/photo%20(4).png" alt="Image">
                         </div>
                         <div class="offer-left-section">
                             <div class="offer-big-text">50%</div>
@@ -5854,7 +5854,7 @@
                                     <div class="image-container">
                                         <div class="image-wrapper">
                                             <div class="sale-badge">SALE</div>
-                                            <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog1.png" alt="Валіза 1" class="product-image" data-page="product" data-image="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog1.png">
+                                            <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog1.png" alt="Suitcase 1" class="product-image" data-page="product" data-image="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog1.png">
                                         </div>
                                         <div class="image-text">Vel vestibulum elit<br>tuvel euqen.</div>
                                         <div class="price-container">
@@ -5866,7 +5866,7 @@
                                     <div class="image-container">
                                         <div class="image-wrapper">
                                             <div class="sale-badge">SALE</div>
-                                            <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog2.png" alt="Валіза 2" class="product-image" data-page="product" data-image="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog2.png">
+                                            <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog2.png" alt="Suitcase 2" class="product-image" data-page="product" data-image="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog2.png">
                                         </div>
                                         <div class="image-text">Vel vestibulum elit<br>tuvel euqen.</div>
                                         <div class="price-container">
@@ -5878,7 +5878,7 @@
                                     <div class="image-container">
                                         <div class="image-wrapper">
                                             <div class="sale-badge">SALE</div>
-                                            <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog3.png" alt="Валіза 3" class="product-image" data-page="product" data-image="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog3.png">
+                                            <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog3.png" alt="Suitcase 3" class="product-image" data-page="product" data-image="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog3.png">
                                         </div>
                                         <div class="image-text">Vel vestibulum elit<br>tuvel euqen.</div>
                                         <div class="price-container">
@@ -5892,7 +5892,7 @@
                                     <div class="image-container">
                                         <div class="image-wrapper">
                                             <div class="sale-badge">SALE</div>
-                                            <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog4.png" alt="Валіза 4" class="product-image" data-page="product" data-image="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog4.png">
+                                            <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog4.png" alt="Suitcase 4" class="product-image" data-page="product" data-image="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog4.png">
                                         </div>
                                         <div class="image-text">Vel vestibulum elit<br>tuvel euqen.</div>
                                         <div class="price-container">
@@ -5904,7 +5904,7 @@
                                     <div class="image-container">
                                         <div class="image-wrapper">
                                             <div class="sale-badge">SALE</div>
-                                            <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog5.png" alt="Валіза 5" class="product-image" data-page="product" data-image="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog5.png">
+                                            <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog5.png" alt="Suitcase 5" class="product-image" data-page="product" data-image="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog5.png">
                                         </div>
                                         <div class="image-text">Vel vestibulum elit<br>tuvel euqen.</div>
                                         <div class="price-container">
@@ -5916,7 +5916,7 @@
                                     <div class="image-container">
                                         <div class="image-wrapper">
                                             <div class="sale-badge">SALE</div>
-                                            <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog6.png" alt="Валіза 6" class="product-image" data-page="product" data-image="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog6.png">
+                                            <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog6.png" alt="Suitcase 6" class="product-image" data-page="product" data-image="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog6.png">
                                         </div>
                                         <div class="image-text">Vel vestibulum elit<br>tuvel euqen.</div>
                                         <div class="price-container">
@@ -5930,7 +5930,7 @@
                                     <div class="image-container">
                                         <div class="image-wrapper">
                                             <div class="sale-badge">SALE</div>
-                                            <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog7.png" alt="Валіза 7" class="product-image" data-page="product" data-image="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog7.png">
+                                            <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog7.png" alt="Suitcase 7" class="product-image" data-page="product" data-image="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog7.png">
                                         </div>
                                         <div class="image-text">Vel vestibulum elit<br>tuvel euqen.</div>
                                         <div class="price-container">
@@ -5942,7 +5942,7 @@
                                     <div class="image-container">
                                         <div class="image-wrapper">
                                             <div class="sale-badge">SALE</div>
-                                            <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog8.png" alt="Валіза 8" class="product-image" data-page="product" data-image="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog8.png">
+                                            <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog8.png" alt="Suitcase 8" class="product-image" data-page="product" data-image="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog8.png">
                                         </div>
                                         <div class="image-text">Vel vestibulum elit<br>tuvel euqen.</div>
                                         <div class="price-container">
@@ -5954,7 +5954,7 @@
                                     <div class="image-container">
                                         <div class="image-wrapper">
                                             <div class="sale-badge">SALE</div>
-                                            <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog9.png" alt="Валіза 9" class="product-image" data-page="product" data-image="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog9.png">
+                                            <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog9.png" alt="Suitcase 9" class="product-image" data-page="product" data-image="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog9.png">
                                         </div>
                                         <div class="image-text">Vel vestibulum elit<br>tuvel euqen.</div>
                                         <div class="price-container">
@@ -5968,7 +5968,7 @@
                                     <div class="image-container">
                                         <div class="image-wrapper">
                                             <div class="sale-badge">SALE</div>
-                                            <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog10.png" alt="Валіза 10" class="product-image" data-page="product" data-image="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog10.png">
+                                            <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog10.png" alt="Suitcase 10" class="product-image" data-page="product" data-image="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog10.png">
                                         </div>
                                         <div class="image-text">Vel vestibulum elit<br>tuvel euqen.</div>
                                         <div class="price-container">
@@ -5980,7 +5980,7 @@
                                     <div class="image-container">
                                         <div class="image-wrapper">
                                             <div class="sale-badge">SALE</div>
-                                            <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog11.png" alt="Валіза 11" class="product-image" data-page="product" data-image="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog11.png">
+                                            <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog11.png" alt="Suitcase 11" class="product-image" data-page="product" data-image="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog11.png">
                                         </div>
                                         <div class="image-text">Vel vestibulum elit<br>tuvel euqen.</div>
                                         <div class="price-container">
@@ -5992,7 +5992,7 @@
                                     <div class="image-container">
                                         <div class="image-wrapper">
                                             <div class="sale-badge">SALE</div>
-                                            <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog12.png" alt="Валіза 12" class="product-image" data-page="product" data-image="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog12.png">
+                                            <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog12.png" alt="Suitcase 12" class="product-image" data-page="product" data-image="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/catalog12.png">
                                         </div>
                                         <div class="image-text">Vel vestibulum elit<br>tuvel euqen.</div>
                                         <div class="price-container">
@@ -6021,7 +6021,7 @@
                             <div class="sidebar-title">Top Best Sets</div>
                             <div class="top-images-column">
                                 <div class="top-image-item">
-                                    <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/topcatalog1.png" alt="Top Валіза 1" class="product-image" data-page="product" data-image="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/topcatalog1.png">
+                                    <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/topcatalog1.png" alt="Top Suitcase 1" class="product-image" data-page="product" data-image="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/topcatalog1.png">
                                     <div>
                                         <div class="top-image-text">Primis in faucibus aenean<br>laoreet rhoncus ipsum eget.</div>
                                         <div class="stars">★★★★★</div>
@@ -6030,7 +6030,7 @@
                                     </div>
                                 </div>
                                 <div class="top-image-item">
-                                    <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/topcatalog2.png" alt="Top Валіза 2" class="product-image" data-page="product" data-image="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/topcatalog2.png">
+                                    <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/topcatalog2.png" alt="Top Suitcase 2" class="product-image" data-page="product" data-image="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/topcatalog2.png">
                                     <div>
                                         <div class="top-image-text">Primis in faucibus aenean<br>laoreet rhoncus ipsum eget.</div>
                                         <div class="stars">★★★★★</div>
@@ -6039,7 +6039,7 @@
                                     </div>
                                 </div>
                                 <div class="top-image-item">
-                                    <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/topcatalog3.png" alt="Top Валіза 3" class="product-image" data-page="product" data-image="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/topcatalog3.png">
+                                    <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/topcatalog3.png" alt="Top Suitcase 3" class="product-image" data-page="product" data-image="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/topcatalog3.png">
                                     <div>
                                         <div class="top-image-text">Primis in faucibus aenean<br>laoreet rhoncus ipsum eget.</div>
                                         <div class="stars">★★★★★</div>
@@ -6048,7 +6048,7 @@
                                     </div>
                                 </div>
                                 <div class="top-image-item">
-                                    <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/topcatalog4.png" alt="Top Валіза 4" class="product-image" data-page="product" data-image="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/topcatalog4.png">
+                                    <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/topcatalog4.png" alt="Top Suitcase 4" class="product-image" data-page="product" data-image="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/topcatalog4.png">
                                     <div>
                                         <div class="top-image-text">Primis in faucibus aenean<br>laoreet rhoncus ipsum eget.</div>
                                         <div class="stars">★★★★★</div>
@@ -6057,7 +6057,7 @@
                                     </div>
                                 </div>
                                 <div class="top-image-item">
-                                    <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/topcatalog5.png" alt="Top Валіза 5" class="product-image" data-page="product" data-image="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/topcatalog5.png">
+                                    <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/topcatalog5.png" alt="Top Suitcase 5" class="product-image" data-page="product" data-image="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/topcatalog5.png">
                                     <div>
                                         <div class="top-image-text">Primis in faucibus aenean<br>laoreet rhoncus ipsum eget.</div>
                                         <div class="stars">★★★★★</div>
@@ -6509,7 +6509,7 @@
             `,
             product: `
                 <div class="product-page">
-                    <!-- Нова секція з двома колонками -->
+                    <!-- New section with two columns -->
                     <div class="product-content-section">
                         <div class="product-image-section">
                             <img id="main-product-image" src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/global1.png"
@@ -6519,7 +6519,7 @@
                             <div class="product-text-line">Global Explorer Max Comfort</div>
                             <div class="product-text-line">Suitcase Pro</div>
 
-                            <!-- Зірочки -->
+                            <!-- Stars -->
                             <div class="product-stars">
                                 <span class="product-star yellow">★</span>
                                 <span class="product-star yellow">★</span>
@@ -6528,10 +6528,10 @@
                                 <span class="product-star gray">★</span>
                         </div>
 
-                            <!-- Ціна -->
+                            <!-- Price -->
                             <div class="product-price">$250</div>
 
-                            <!-- Опис -->
+                            <!-- Description -->
                             <div class="product-description">
                                 The new Global Explorer Max Comfort Suitcase Pro is a bold reimagining of<br>
                                 travel essentials, designed to elevate every journey. Made with at least 30%<br>
@@ -6539,7 +6539,7 @@
                                 conscious innovation with rugged durability.
                             </div>
 
-                            <!-- Додатковий текст -->
+                            <!-- Additional text -->
                             <div class="product-additional-text">
                                 The ergonomic handle and GlideMotion spinner wheels ensure effortless<br>
                                 mobility while making a statement in sleek design. Inside, the modular<br>
@@ -6547,7 +6547,7 @@
                                 neatly organized, no matter the destination.
                             </div>
 
-                            <!-- Size, Color, Category з випадаючими списками -->
+                            <!-- Size, Color, Category with dropdowns -->
                             <div class="product-info-item">Size</div>
                             <div class="product-dropdown-container">
                                 <select class="product-dropdown-select">
@@ -6569,7 +6569,7 @@
                                 </select>
                             </div>
 
-                            <!-- Quantity та Add To Cart -->
+                            <!-- Quantity and Add To Cart -->
                             <div class="product-action-container">
                                 <div class="product-quantity">
                                     <button class="product-quantity-button">-</button>
@@ -6589,7 +6589,7 @@
                         </div>
                     </div>
 
-                    <!-- Нова секція з DETAILS, REVIEWS, SHIPPING POLICY -->
+                    <!-- New section with DETAILS, REVIEWS, SHIPPING POLICY -->
                     <div class="product-tabs-section">
                         <div class="product-tabs-container">
                             <div class="product-tab active" data-tab="details">DETAILS</div>
@@ -6598,7 +6598,7 @@
                         </div>
                     </div>
 
-                    <!-- Вміст вкладок -->
+                    <!-- Tab content -->
                     <div class="product-tab-content active" id="details-tab">
                         <div class="product-long-text-content">
                             Vestibulum commodo sapien non elit porttitor, vitae volutpat nibh mollis. Nulla porta risus id neque tempor,
@@ -6626,7 +6626,7 @@
                     </div>
 
                     <div class="product-tab-content" id="reviews-tab">
-                        <!-- Вміст відгуків -->
+                        <!-- Reviews content -->
                         <div class="reviews-container">
                             <div class="reviews-split-section">
                                 <div class="reviews-left-half">
@@ -6695,7 +6695,7 @@
                                 </div>
                             </div>
                             <div class="user-reviews-container" id="user-reviews-container">
-                                <!-- Тут будуть додаватися відгуки користувачів -->
+                                <!-- User reviews will be added here -->
                             </div>
                         </div>
                     </div>
@@ -6708,7 +6708,7 @@
                         </div>
                     </div>
 
-                    <!-- Нова секція You May Also Like -->
+                    <!-- New section You May Also Like -->
                     <div class="product-recommendations-section">
                         <div class="product-recommendations-title">You May Also Like</div>
                         <div class="product-recommendation-images">
@@ -6868,11 +6868,11 @@
                 </div>
             `,
             user: `
-                <!-- Додане зображення -->
+                <!-- Added image -->
                 <img src="https://raw.githubusercontent.com/KarinaR-Ch/suitcases/refs/heads/main/hero%20(3).png" alt="Hero Image"
                     class="full-width-image">
 
-                <!-- Шапка таблиці -->
+                <!-- Table header -->
                 <div class="table-container">
                     <div class="table-header">
                         <div class="table-column">Image</div>
@@ -6884,23 +6884,23 @@
                     </div>
                 </div>
 
-                <!-- Рядки таблиці -->
+                <!-- Table rows -->
                 <div class="table-rows-container" id="cart-items-container">
-                    <!-- Тут будуть динамічно додані товари з кошика -->
+                    <!-- Cart items will be dynamically added here -->
                 </div>
 
-                <!-- Роздільники між рядками -->
+                <!-- Row separators -->
                 <div class="row-separator"></div>
                 <div class="row-separator"></div>
                 <div class="row-separator"></div>
 
-                <!-- Кнопки -->
+                <!-- Buttons -->
                 <div class="buttons-container">
                     <button class="action-btn" onclick="loadPage('catalog')">CONTINUE SHOPPING</button>
                     <button class="action-btn" onclick="clearCart()">CLEAR SHOPPING CART</button>
                 </div>
 
-                <!-- Прямокутник -->
+                <!-- Rectangle -->
                 <div class="summary-rectangle">
                     <div class="summary-content">
                         <div class="summary-labels">
@@ -6917,7 +6917,7 @@
                     <button class="checkout-btn">CHECKOUT</button>
                 </div>
 
-                <!-- Футер -->
+                <!-- Footer -->
                 <div class="footer-section">
                     <div class="footer-header">
                         <div class="footer-title">Our Benefits</div>
@@ -7011,7 +7011,7 @@
             `
         };
 
-        // Стилі для About Us сторінки
+        // Styles for About Us page
         const aboutStyles = `
             <style>
                 .hero-section {
@@ -7614,12 +7614,12 @@
             </style>
         `;
 
-        // Додаємо стилі для About Us до документу
+        // Add About Us styles to document
         document.head.insertAdjacentHTML('beforeend', aboutStyles);
 
-        // Функція для зміни сторінки
+        // Function to change page
         function loadPage(page) {
-            // Якщо користувач не залогінений і намагається перейти на сторінку корзини, показуємо модальне вікно логіну
+            // If user is not logged in and trying to access cart page, show login modal
             if (page === 'user' && !isLoggedIn) {
                 openLoginModal();
                 return;
@@ -7628,17 +7628,17 @@
             const container = document.getElementById('content-container');
             const navLinks = document.querySelectorAll('.nav-link');
 
-            // Додаємо анімацію зникнення
+            // Add fade-out animation
             container.classList.add('fade-out');
 
             setTimeout(() => {
-                // Оновлюємо контент
+                // Update content
                 container.innerHTML = pages[page];
 
-                // Видаляємо анімацію зникнення
+                // Remove fade-out animation
                 container.classList.remove('fade-out');
 
-                // Оновлюємо активний пункт меню
+                // Update active menu item
                 navLinks.forEach(link => {
                     link.classList.remove('active');
                     if (link.getAttribute('data-page') === page) {
@@ -7646,10 +7646,10 @@
                     }
                 });
 
-                // Додаємо обробники подій для зображень продуктів
+                // Add event handlers for product images
                 addProductImageListeners();
 
-                // Додаємо обробники для вкладок на сторінці продукту
+                // Add handlers for tabs on product page
                 if (page === 'product') {
                     setupProductPage();
                     setupProductTabs();
@@ -7657,30 +7657,30 @@
                     setupReviewsForm();
                 }
 
-                // Додаємо обробники для сторінки корзини
+                // Add handlers for cart page
                 if (page === 'user') {
                     setupCartPage();
                     updateCartSummary();
                 }
 
-                // Додаємо обробники подій для кнопок Add to Cart
+                // Add event handlers for Add to Cart buttons
                 setupAddToCartButtons();
 
-                // Додаємо обробники для контактної форми
+                // Add handlers for contact form
                 if (page === 'contact') {
                     setupContactForm();
                 }
 
-                // Прокручуємо на початок сторінки
+                // Scroll to top of page
                 window.scrollTo(0, 0);
             }, 300);
         }
 
-        // Функція для налаштування сторінки продукту
+        // Function to setup product page
         function setupProductPage() {
             const mainImage = document.getElementById('main-product-image');
             if (mainImage) {
-                // Перевіряємо, чи є збережене зображення в sessionStorage
+                // Check if there's a saved image in sessionStorage
                 const clickedImageUrl = sessionStorage.getItem('clickedProductImage');
                 if (clickedImageUrl) {
                     mainImage.src = clickedImageUrl;
@@ -7689,7 +7689,7 @@
             }
         }
 
-        // Функція для додавання обробників подій для кнопок Add to Cart
+        // Function to add event handlers for Add to Cart buttons
         function setupAddToCartButtons() {
             const addToCartButtons = document.querySelectorAll('.add-to-cart-btn, .product-add-to-cart, .product-recommendation-add-to-cart');
             
@@ -7705,9 +7705,9 @@
             });
         }
 
-        // Функція для додавання товару до кошика
+        // Function to add product to cart
         function addToCart(product) {
-            // Перевіряємо, чи товар вже є в кошику
+            // Check if product is already in cart
             const existingProduct = cart.find(item => item.name === product.name && item.price === product.price);
             
             if (existingProduct) {
@@ -7719,14 +7719,14 @@
                 });
             }
             
-            // Оновлюємо відображення кошика
+            // Update cart display
             updateCartDisplay();
             
-            // Показуємо сповіщення
+            // Show notification
             showAddToCartNotification(product.name);
         }
 
-        // Функція для оновлення відображення кошика
+        // Function to update cart display
         function updateCartDisplay() {
             const cartBadge = document.getElementById('cart-badge');
             const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
@@ -7736,17 +7736,17 @@
                 cartBadge.style.display = totalItems > 0 ? 'flex' : 'none';
             }
             
-            // Оновлюємо модальне вікно кошика
+            // Update cart modal
             updateCartModal();
             
-            // Оновлюємо сторінку корзини, якщо вона активна
+            // Update cart page if it's active
             if (document.querySelector('.table-rows-container')) {
                 updateCartPage();
                 updateCartSummary();
             }
         }
 
-        // Функція для оновлення модального вікна кошика
+        // Function to update cart modal
         function updateCartModal() {
             const subtotalElement = document.getElementById('cart-subtotal');
             const shippingElement = document.getElementById('cart-shipping-value');
@@ -7754,7 +7754,7 @@
             
             if (subtotalElement && shippingElement && totalElement) {
                 const subtotal = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
-                // Доставка 30, якщо є товари, інакше 0
+                // Shipping 30 if there are items, otherwise 0
                 const shipping = cart.length > 0 ? 30 : 0;
                 const total = subtotal + shipping;
 
@@ -7764,14 +7764,14 @@
             }
         }
 
-        // Функція для оновлення сторінки корзини
+        // Function to update cart page
         function updateCartPage() {
             const container = document.getElementById('cart-items-container');
             if (!container) return;
 
             container.innerHTML = '';
 
-            // Створюємо колонки
+            // Create columns
             const imagesColumn = document.createElement('div');
             imagesColumn.className = 'images-column';
             
@@ -7790,28 +7790,28 @@
             const deleteColumn = document.createElement('div');
             deleteColumn.className = 'delete-column';
 
-            // Додаємо товари до колонок
+            // Add items to columns
             cart.forEach((item, index) => {
-                // Зображення
+                // Image
                 const img = document.createElement('img');
                 img.src = item.image;
                 img.alt = item.name;
                 img.className = 'cart-image';
                 imagesColumn.appendChild(img);
 
-                // Назва товару
+                // Product name
                 const name = document.createElement('div');
                 name.className = 'product-name';
                 name.textContent = item.name;
                 productNamesColumn.appendChild(name);
 
-                // Ціна
+                // Price
                 const price = document.createElement('div');
                 price.className = 'price';
                 price.textContent = `$${item.price}`;
                 pricesColumn.appendChild(price);
 
-                // Кількість
+                // Quantity
                 const quantityControl = document.createElement('div');
                 quantityControl.className = 'quantity-control';
                 
@@ -7834,13 +7834,13 @@
                 quantityControl.appendChild(plusBtn);
                 quantityColumn.appendChild(quantityControl);
 
-                // Загальна вартість
+                // Total price
                 const total = document.createElement('div');
                 total.className = 'total';
                 total.textContent = `$${item.price * item.quantity}`;
                 totalsColumn.appendChild(total);
 
-                // Кнопка видалення
+                // Delete button
                 const deleteBtn = document.createElement('button');
                 deleteBtn.className = 'delete-btn';
                 deleteBtn.onclick = () => removeFromCart(index);
@@ -7854,7 +7854,7 @@
                 deleteColumn.appendChild(deleteBtn);
             });
 
-            // Додаємо колонки до контейнера
+            // Add columns to container
             container.appendChild(imagesColumn);
             container.appendChild(productNamesColumn);
             container.appendChild(pricesColumn);
@@ -7863,7 +7863,7 @@
             container.appendChild(deleteColumn);
         }
 
-        // Функція для оновлення підсумків корзини
+        // Function to update cart summary
         function updateCartSummary() {
             const subtotalElement = document.getElementById('cart-subtotal-summary');
             const shippingElement = document.getElementById('cart-shipping-summary');
@@ -7871,7 +7871,7 @@
             
             if (subtotalElement && shippingElement && totalElement) {
                 const subtotal = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
-                const shipping = cart.length > 0 ? 30 : 0; // Фіксована вартість доставки
+                const shipping = cart.length > 0 ? 30 : 0; // Fixed shipping cost
                 const total = subtotal + shipping;
                 
                 subtotalElement.textContent = `$${subtotal}`;
@@ -7880,7 +7880,7 @@
             }
         }
 
-        // Функція для оновлення кількості товару
+        // Function to update product quantity
         function updateQuantity(index, change) {
             if (cart[index]) {
                 cart[index].quantity += change;
@@ -7893,7 +7893,7 @@
             }
         }
 
-        // Функція для видалення товару з кошика
+        // Function to remove product from cart
         function removeFromCart(index) {
             if (cart[index]) {
                 cart.splice(index, 1);
@@ -7901,15 +7901,15 @@
             }
         }
 
-        // Функція для очищення кошика
+        // Function to clear cart
         function clearCart() {
             cart = [];
             updateCartDisplay();
         }
 
-        // Функція для показу сповіщення про додавання до кошика
+        // Function to show add to cart notification
         function showAddToCartNotification(productName) {
-            // Створюємо сповіщення
+            // Create notification
             const notification = document.createElement('div');
             notification.style.position = 'fixed';
             notification.style.top = '20px';
@@ -7930,7 +7930,7 @@
             
             document.body.appendChild(notification);
             
-            // Автоматично видаляємо сповіщення через 3 секунди
+            // Automatically remove notification after 3 seconds
             setTimeout(() => {
                 notification.style.opacity = '0';
                 setTimeout(() => {
@@ -7941,7 +7941,7 @@
             }, 3000);
         }
 
-        // Функція для показу сповіщення про відгук
+        // Function to show review notification
         function showReviewNotification() {
             const notification = document.createElement('div');
             notification.style.position = 'fixed';
@@ -7963,7 +7963,7 @@
             
             document.body.appendChild(notification);
             
-            // Автоматично видаляємо сповіщення через 3 секунди
+            // Automatically remove notification after 3 seconds
             setTimeout(() => {
                 notification.style.opacity = '0';
                 setTimeout(() => {
@@ -7974,7 +7974,7 @@
             }, 3000);
         }
 
-        // Функція для налаштування контактної форми
+        // Function to setup contact form
         function setupContactForm() {
             const sendButton = document.getElementById('contact-send-btn');
             if (sendButton) {
@@ -7986,15 +7986,15 @@
                     const topic = document.getElementById('contact-topic').value;
                     const message = document.getElementById('contact-message').value;
                     
-                    // Перевірка заповненості обов'язкових полів
+                    // Check if required fields are filled
                     if (!name || !email || !topic || !message) {
                         return;
                     }
                     
-                    // Показуємо сповіщення про успішне відправлення
+                    // Show success notification
                     showContactNotification();
                     
-                    // Очищаємо форму
+                    // Clear form
                     document.getElementById('contact-name').value = '';
                     document.getElementById('contact-email').value = '';
                     document.getElementById('contact-topic').value = '';
@@ -8003,7 +8003,7 @@
             }
         }
 
-        // Функція для показу сповіщення про відправлення контактної форми
+        // Function to show contact form notification
         function showContactNotification() {
             const notification = document.createElement('div');
             notification.style.position = 'fixed';
@@ -8025,7 +8025,7 @@
             
             document.body.appendChild(notification);
             
-            // Автоматично видаляємо сповіщення через 3 секунди
+            // Automatically remove notification after 3 seconds
             setTimeout(() => {
                 notification.style.opacity = '0';
                 setTimeout(() => {
@@ -8036,7 +8036,7 @@
             }, 3000);
         }
 
-        // Додаємо обробники подій для навігації
+        // Add event handlers for navigation
         document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', (e) => {
                 e.preventDefault();
@@ -8047,7 +8047,7 @@
             });
         });
 
-        // ЗМІНА: Змінюємо обробник для іконки користувача
+        // CHANGE: Change handler for user icon
         document.querySelector('.user-icon').addEventListener('click', (e) => {
             e.preventDefault();
             if (isLoggedIn) {
@@ -8057,13 +8057,13 @@
             }
         });
 
-        // Додаємо обробник для іконки корзини
+        // Add handler for cart icon
         document.querySelector('.cart-icon').addEventListener('click', (e) => {
             e.preventDefault();
             openCartModal();
         });
 
-        // Завантажуємо домашню сторінку при завантаженні
+        // Load home page on load
         document.addEventListener('DOMContentLoaded', () => {
             checkRememberedUser();
             if (!isLoggedIn) {
@@ -8072,13 +8072,13 @@
             updateCartDisplay();
         });
 
-        // Функції для каталогу
+        // Functions for the catalog
         function changePage(pageNumber) {
-            // Логіка зміни сторінки без alert
+            // Page change logic without alert
         }
 
         function nextPage() {
-            // Логіка переходу на наступну сторінку без alert
+            // Next page logic without alert
         }
 
         function focusSidebarSearch() {
@@ -8092,11 +8092,10 @@
             const searchInput = document.querySelector('.sidebar-search-input');
             if (searchInput) {
                 const searchTerm = searchInput.value;
-                // Логіка пошуку без alert
             }
         }
 
-        // Додаємо обробник подій для пошуку в сайдбарі
+        // Adding event handler for sidebar search
         document.addEventListener('click', (e) => {
             if (e.target.classList.contains('sidebar-search-icon') ||
                 e.target.classList.contains('sidebar-search-container')) {
@@ -8110,7 +8109,7 @@
             }
         });
 
-        // Функція для додавання обробників подій для зображень продуктів
+        // Function for adding event handlers for product images
         function addProductImageListeners() {
             const productImages = document.querySelectorAll('.product-image, .suitcase-image, .new-product-image');
             productImages.forEach(img => {
@@ -8120,10 +8119,10 @@
                     sessionStorage.setItem('clickedProductImage', imageUrl);
                     loadPage('product');
                 });
-            });
+            }); 
         }
 
-        // Функція для налаштування вкладок на сторінці продукту
+        // Feature for setting up tabs on product page
         function setupProductTabs() {
             const tabs = document.querySelectorAll('.product-tab');
             const tabContents = document.querySelectorAll('.product-tab-content');
@@ -8132,14 +8131,14 @@
                 tab.addEventListener('click', () => {
                     const tabId = tab.getAttribute('data-tab');
 
-                    // Видаляємо активний клас з усіх вкладок
+                    // Remove active class from all tabs
                     tabs.forEach(t => t.classList.remove('active'));
                     tabContents.forEach(content => content.classList.remove('active'));
 
-                    // active class to current tab
+                    // Add active class to current tab
                     tab.classList.add('active');
 
-                    // We show relevant content
+                    // Show relevant content
                     const content = document.getElementById(`${tabId}-tab`);
                     if (content) {
                         content.classList.add('active');
@@ -8148,7 +8147,7 @@
             });
         }
 
-        // Function for customizing the Add to Cart button
+        // Function for setting up Add to Cart button
         function setupAddToCart() {
             const addToCartButtons = document.querySelectorAll('.product-add-to-cart, .product-add-to-cart-text, .product-recommendation-add-to-cart, .product-recommendation-add-to-cart-text');
 
@@ -8164,13 +8163,13 @@
             });
         }
 
-        // Cart page customization feature
+        // Cart page setup feature
         function setupCartPage() {
             updateCartPage();
             updateCartSummary();
         }
 
-        // Functions for the modal login window
+        // Functions for login modal
         function openLoginModal() {
             document.getElementById('login-modal').style.display = 'flex';
         }
@@ -8179,7 +8178,7 @@
             document.getElementById('login-modal').style.display = 'none';
         }
 
-        // Feedback form customization feature
+        // Review form setup feature
         function setupReviewsForm() {
             // Setting stars for rating
             const stars = document.querySelectorAll('.rate-star');
@@ -8227,7 +8226,7 @@
             });
         }
 
-        // Function for customizing form fields
+        // Function for setting up form fields
         function setupFormField(containerSelector, inputSelector, labelSelector) {
             const container = document.querySelector(containerSelector);
             const input = document.querySelector(inputSelector);
@@ -8244,26 +8243,26 @@
                     }
                 });
 
-                // If the field already has a value when loaded
+                // If field already has value when loaded
                 if (input.value) {
                     container.classList.add('focused');
                 }
             }
         }
 
-        // Function for sending feedback
+        // Function for submitting review
         function submitReview() {
             const nameInput = document.querySelector('.small-rectangle:first-child .small-input');
             const emailInput = document.querySelector('.small-rectangle:last-child .small-input');
             const reviewTextarea = document.querySelector('.review-textarea');
             const stars = document.querySelectorAll('.rate-star.active');
 
-            // Checking that required fields are complete
+            // Check that required fields are filled
             if (!nameInput.value || !emailInput.value || !reviewTextarea.value || stars.length === 0) {
                 return;
             }
 
-            // Create a new review
+            // Create new review
             const newReview = {
                 name: nameInput.value,
                 email: emailInput.value,
@@ -8272,13 +8271,13 @@
                 date: new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
             };
 
-            // Feedback to the array
+            // Add review to array
             userReviews.push(newReview);
 
-            // Update feedback display
+            // Update review display
             displayUserReviews();
 
-            // Form cleaning
+            // Clear form
             nameInput.value = '';
             emailInput.value = '';
             reviewTextarea.value = '';
@@ -8288,11 +8287,11 @@
             });
             document.querySelector('.checkbox-square').classList.remove('checked');
 
-            // Display notification
+            // Show notification
             showReviewNotification();
         }
 
-        // User feedback display feature
+        // User review display feature
         function displayUserReviews() {
             const container = document.getElementById('user-reviews-container');
             if (!container) return;
@@ -8326,7 +8325,7 @@
             });
         }
 
-        // Functions for the modal shopping cart window
+        // Functions for cart modal
         function openCartModal() {
             updateCartModal();
             document.getElementById('cart-modal').style.display = 'flex';
@@ -8336,7 +8335,7 @@
             document.getElementById('cart-modal').style.display = 'none';
         }
 
-        // Event handlers for modal windows
+        // Event handlers for modals
         document.addEventListener('click', (e) => {
             if (e.target.classList.contains('close-login') || e.target.id === 'login-modal') {
                 closeLoginModal();
@@ -8346,7 +8345,7 @@
             }
         });
 
-        // Descriptions for quantity buttons on a product page
+        // Handlers for quantity buttons on product page
         document.addEventListener('click', (e) => {
             if (e.target.classList.contains('product-quantity-button')) {
                 const quantityElement = e.target.parentElement.querySelector('.product-quantity-number');
@@ -8362,26 +8361,26 @@
             }
         });
 
-        // Compiler for login form
+        // Handler for login form
         document.getElementById('login-form').addEventListener('submit', function(e) {
             e.preventDefault();
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
             const rememberMe = document.getElementById('remember-checkbox').classList.contains('checked');
 
-            // Checking the completeness of fields
+            // Check field completion
             if (!email || !password) {
                 return;
             }
 
-            // When "Remember me" is selected, data is saved
+            // Save data when "Remember me" is selected
             if (rememberMe) {
                 rememberUser(email, password);
             } else {
                 forgetUser();
             }
 
-            // Status of a registered client
+            // Set user as logged in
             isLoggedIn = true;
 
             closeLoginModal();
@@ -8395,15 +8394,15 @@
             passwordInput.setAttribute('type', type);
         });
 
-        // Compiler for checkbox "Remember me"
+        // Handler for "Remember me" checkbox
         document.getElementById('remember-checkbox').addEventListener('click', function() {
             this.classList.toggle('checked');
         });
 
-        // Collector for buttons data-action="goto-catalog"
+        // Handler for buttons with data-action="goto-catalog"
         document.addEventListener('click', function(e) {
             let target = e.target;
-            // Якщо клікнули на дочірній елемент, то піднімаємося до елемента з data-action
+            // If clicked on child element, find parent with data-action
             if (!target.hasAttribute('data-action')) {
                 target = target.closest('[data-action]');
             }
@@ -8415,4 +8414,4 @@
     </script>
 </body>
 
-</html> 
+</html>
