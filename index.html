@@ -295,6 +295,74 @@
             .catalog-section .image-row {
                 transform: translateY(280px);
             }
+
+            /* CATALOG MOBILE ADAPTATION */
+            .catalog-section .main-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .catalog-section .sidebar {
+                width: 100%;
+                margin-top: 30px;
+                order: 2;
+            }
+
+            .catalog-section .content-wrapper {
+                order: 1;
+            }
+
+            .catalog-section .image-row {
+                flex-direction: column;
+                align-items: center;
+                gap: 30px;
+                margin-bottom: 30px;
+            }
+
+            .catalog-section .image-container {
+                min-width: 100%;
+                max-width: 300px;
+            }
+
+            .catalog-section .image-wrapper img {
+                width: 100%;
+                height: 350px;
+                max-width: 280px;
+            }
+
+            .catalog-section .dropdown {
+                position: relative;
+                width: 100%;
+                margin: 15px 0;
+            }
+
+            .catalog-section .results-text {
+                text-align: center;
+                margin-bottom: 15px;
+            }
+
+            .catalog-section .top-images-column {
+                flex-direction: column;
+            }
+
+            .catalog-section .top-image-item {
+                width: 100%;
+                flex-direction: row;
+                justify-content: flex-start;
+                text-align: left;
+            }
+
+            .catalog-section .top-image-item img {
+                width: 100px;
+                height: 100px;
+                flex-shrink: 0;
+            }
+
+            .catalog-section .pagination {
+                flex-wrap: wrap;
+                gap: 10px;
+                justify-content: center;
+            }
         }
 
         @media (max-width: 480px) {
@@ -327,6 +395,26 @@
             /* NEW STYLE: Lift suitcase image up 200px in mobile version */
             .gray-rectangle .image-container {
                 top: calc(50% - 80px) !important;
+            }
+
+            /* CATALOG MOBILE ADAPTATION */
+            .catalog-section .image-wrapper img {
+                height: 300px;
+            }
+
+            .catalog-section .top-image-item {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .catalog-section .top-image-item img {
+                width: 120px;
+                height: 120px;
+                margin: 0 auto;
+            }
+
+            .catalog-section .sidebar-search-container {
+                width: 100%;
             }
         }
 
@@ -2198,6 +2286,8 @@
                 left: 30px;
                 width: 400px;
                 top: 140px !important;
+                white-space: normal;
+                line-height: 1.4;
             }
 
             .paragraph-2 {
@@ -2205,6 +2295,8 @@
                 left: 30px;
                 width: 400px;
                 top: 170px !important;
+                white-space: normal;
+                line-height: 1.4;
             }
 
             .button {
@@ -2488,6 +2580,8 @@
                 left: 15px;
                 width: 280px;
                 top: 100px !important;
+                white-space: normal;
+                line-height: 1.4;
             }
 
             .paragraph-2 {
@@ -2495,6 +2589,8 @@
                 left: 15px;
                 width: 280px;
                 top: 120px !important;
+                white-space: normal;
+                line-height: 1.4;
             }
 
             .button {
@@ -3992,6 +4088,8 @@
                 left: 15px;
                 width: 280px;
                 top: 100px !important;
+                white-space: normal;
+                line-height: 1.4;
             }
 
             .paragraph-2 {
@@ -3999,6 +4097,8 @@
                 left: 15px;
                 width: 280px;
                 top: 120px !important;
+                white-space: normal;
+                line-height: 1.4;
             }
 
             .button {
@@ -5345,6 +5445,69 @@
                 text-align: center;
             }
         }
+
+        /* NEW STYLES FOR MOBILE ADAPTATION OF NEW PRODUCTS ARRIVAL SECTION */
+        @media (max-width: 768px) {
+            .new-products-images {
+                flex-direction: column;
+                gap: 30px;
+                margin-top: 30px;
+            }
+
+            .new-product-wrapper {
+                width: 100%;
+                max-width: 280px;
+                margin: 0 auto;
+            }
+
+            .new-product-image {
+                width: 100%;
+                height: 350px;
+            }
+
+            .new-product-text {
+                font-size: 17px;
+            }
+
+            .new-product-price {
+                font-size: 17px;
+            }
+
+            .new-view-button {
+                width: 140px;
+                height: 38px;
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .new-products-images {
+                gap: 25px;
+                margin-top: 25px;
+            }
+
+            .new-product-wrapper {
+                max-width: 260px;
+            }
+
+            .new-product-image {
+                height: 300px;
+            }
+
+            .new-product-text {
+                font-size: 16px;
+            }
+
+            .new-product-price {
+                font-size: 16px;
+            }
+
+            .new-view-button {
+                width: 130px;
+                height: 36px;
+                font-size: 14px;
+            }
+        }
     </style>
 </head>
 
@@ -6552,6 +6715,10 @@
                             <div class="product-dropdown-container">
                                 <select class="product-dropdown-select">
                                     <option value="" disabled selected>Choose option</option>
+                                    <option value="small">Small (20")</option>
+                                    <option value="medium">Medium (24")</option>
+                                    <option value="large">Large (28")</option>
+                                    <option value="xlarge">Extra Large (32")</option>
                                 </select>
                             </div>
 
@@ -6559,6 +6726,11 @@
                             <div class="product-dropdown-container">
                                 <select class="product-dropdown-select">
                                     <option value="" disabled selected>Choose option</option>
+                                    <option value="black">Black</option>
+                                    <option value="navy">Navy Blue</option>
+                                    <option value="red">Burgundy Red</option>
+                                    <option value="silver">Silver</option>
+                                    <option value="green">Forest Green</option>
                                 </select>
                             </div>
 
@@ -6566,6 +6738,11 @@
                             <div class="product-dropdown-container">
                                 <select class="product-dropdown-select">
                                     <option value="" disabled selected>Choose option</option>
+                                    <option value="carry-on">Carry-On</option>
+                                    <option value="checked">Checked Luggage</option>
+                                    <option value="duffel">Duffel Bag</option>
+                                    <option value="backpack">Travel Backpack</option>
+                                    <option value="business">Business Collection</option>
                                 </select>
                             </div>
 
@@ -7355,7 +7532,7 @@
 
                     .icon-text {
                         font-size: 14px;
-                    }
+                        }
 
                     .icon-description {
                         font-size: 15px;
@@ -7491,7 +7668,7 @@
 
                     .icon-text {
                         font-size: 12px;
-                    }
+                        }
 
                     .icon-description {
                         font-size: 13px;
